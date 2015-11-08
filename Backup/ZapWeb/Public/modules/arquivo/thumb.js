@@ -1,0 +1,104 @@
+﻿yum.define([
+	PI.Url.create('Arquivo', '/thumb.html'),
+	PI.Url.create('Arquivo', '/thumb.css'),
+    PI.Url.create('Arquivo', '/modal/modal.js'),
+    PI.Url.create('Arquivo', '/preview/preview.js')
+], function (html) {
+
+    Class('Arquivo.Thumb').Extend(Mvc.Component).Body({
+
+        instances: function () {
+            this.view = new Mvc.View(html);
+
+            this.contextMenu = new UI.ContextMenu();
+        },
+
+        viewDidLoad: function () {
+
+            this.contextMenu.setContext(this.view.element);
+
+            this.visualizar = new UI.ContextMenuItem({
+                label: 'Nova Guia',
+                imageUrl: PI.Url.create('Arquivo', '/open.png').getUrl()
+            });
+
+            this.abrir = new UI.ContextMenuItem({
+                label: 'Abrir',
+                imageUrl: PI.Url.create('Arquivo', '/open.png').getUrl()
+            });
+
+            this.baixar = new UI.ContextMenuItem({
+                label: 'Baixar',
+                imageUrl: PI.Url.create('Arquivo', '/download.png').getUrl()
+            });
+
+            this.excluir = new UI.ContextMenuItem({
+                label: 'Excluir',
+                imageUrl: PI.Url.create('Arquivo', '/delete.png').getUrl()
+            });
+
+            this.contextMenu.addItem(this.visualizar);
+            // this.contextMenu.addItem(this.abrir);
+            this.contextMenu.addItem(this.baixar);
+            this.contextMenu.addItem(this.excluir);
+
+            this.base.viewDidLoad();
+        },
+
+        events: {
+
+            '@img click': function () {
+                var preview = new Arquivo.Preview({
+                    arquivo: this.arquivo
+                });
+
+                preview.render(this.view.modal);
+            },
+
+            '{abrir} click': function () {
+                var modal = new Arquivo.Modal({
+                    showBackground: false,
+                    image: {
+                        url: PI.Url.create('BaseUrl', '/Arquivo/Thumb?hash=' + this.arquivo.Hash).getUrl(),
+                        width: 550
+                    }
+                });
+
+                modal.render(this.view.modal);
+
+                modal.open();
+            },
+
+            '{visualizar} click': function () {
+                this.view.link.attr('href', PI.Url.create('BaseUrl', '/Arquivo/Visualizar?hash=' + this.arquivo.Hash).getUrl());
+                this.view.link[0].click();
+            },
+
+            '{baixar} click': function () {
+                PI.Url.to('BaseUrl', '/Arquivo/Download?hash=' + this.arquivo.Hash);
+            },
+
+            '{excluir} click': function () {
+                var self = this;
+
+                Confirm.show('Confirmação', 'Tem certeza que deseja excluir?', function (b) {
+
+                    if (b) {
+                        self.arquivo.remove().ok(function () {
+                            self.destroy();
+                        }).error(function (message) {
+                            Alert.error('Não foi possível salvar', message);
+                        }).done(function () {
+
+                        });
+                    }
+
+                });
+
+            }
+
+        }
+
+    });
+
+});

@@ -1,0 +1,990 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"centroC",
+				"CentroCusto"
+			],
+			[
+				"centro",
+				"centrocusto"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"sel",
+				"selected"
+			],
+			[
+				"select",
+				"selectedd"
+			],
+			[
+				"fn",
+				"function	function"
+			],
+			[
+				"lay",
+				"layers"
+			],
+			[
+				"set",
+				"setQuery"
+			],
+			[
+				"tile",
+				"tileLayer"
+			],
+			[
+				"show",
+				"__showClusterMenu"
+			],
+			[
+				"cre",
+				"createMapLayer"
+			],
+			[
+				"ti",
+				"tileLayer"
+			],
+			[
+				"tie",
+				"title"
+			],
+			[
+				"co",
+				"collection"
+			],
+			[
+				"gogo",
+				"gogeo"
+			],
+			[
+				"layer",
+				"layerModel"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"repetir",
+				"repetirModal"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"text",
+				"textext"
+			],
+			[
+				"arg",
+				"args"
+			],
+			[
+				"getge",
+				"getGeoAgg"
+			],
+			[
+				"data",
+				"database"
+			],
+			[
+				"_con",
+				"_convexHull"
+			],
+			[
+				"cl",
+				"cluster"
+			],
+			[
+				"ele",
+				"eleitores"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"up",
+				"uploader"
+			],
+			[
+				"remove",
+				"removeFile"
+			],
+			[
+				"getfu",
+				"getFullPathFromFile"
+			],
+			[
+				"fu",
+				"fullPath"
+			],
+			[
+				"den",
+				"denuncias"
+			],
+			[
+				"pai",
+				"painels"
+			],
+			[
+				"con",
+				"convertToClassName"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"lu",
+				"lucroBruto"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"proto",
+				"protocol"
+			],
+			[
+				"marin",
+				"margin-top"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"des",
+				"destroyPages"
+			],
+			[
+				"hide",
+				"hidePages"
+			],
+			[
+				"ne",
+				"newPage"
+			],
+			[
+				"ba",
+				"breadcumb"
+			],
+			[
+				"pro",
+				"processUrl"
+			],
+			[
+				"board",
+				"board"
+			],
+			[
+				"gog",
+				"gogeo"
+			],
+			[
+				"get",
+				"getObj"
+			],
+			[
+				"hash",
+				"hashId"
+			],
+			[
+				"call",
+				"callbacks"
+			],
+			[
+				"re",
+				"removeLimitLayer"
+			],
+			[
+				"remov",
+				"removeGeomParamUrl"
+			],
+			[
+				"dra",
+				"drawControls"
+			],
+			[
+				"last",
+				"lastSearcIndex"
+			],
+			[
+				"ci",
+				"cidades"
+			],
+			[
+				"bod",
+				"boardItem"
+			],
+			[
+				"goge",
+				"gogeoLayer"
+			],
+			[
+				"ge",
+				"getLayerByNome"
+			],
+			[
+				"fun",
+				"function	function"
+			],
+			[
+				"cid",
+				"cidadesCsv"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"para",
+				"paraLeft"
+			],
+			[
+				"f",
+				"flybox"
+			],
+			[
+				"ani",
+				"ANIME_TIMMING"
+			],
+			[
+				"col",
+				"colapsed"
+			],
+			[
+				"goi",
+				"goiasDelimeter"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"total",
+				"totalReceita"
+			],
+			[
+				"to",
+				"totalReceitas"
+			],
+			[
+				"getl",
+				"getLevesHierquia"
+			],
+			[
+				"rec",
+				"receita"
+			],
+			[
+				"desp",
+				"despesa"
+			],
+			[
+				"recei",
+				"receitaModel"
+			],
+			[
+				"tal",
+				"totalGeral"
+			],
+			[
+				"h",
+				"Helpers"
+			],
+			[
+				"tpl",
+				"tplUnidade"
+			],
+			[
+				"lo",
+				"loadAndFill"
+			],
+			[
+				"unidade",
+				"unidadeId"
+			],
+			[
+				"unide",
+				"unidade"
+			],
+			[
+				"un",
+				"undefined	undefined"
+			],
+			[
+				"popup",
+				"popupUnidade"
+			],
+			[
+				"Centro",
+				"CentroCusto"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"fonts",
+				"font-style"
+			],
+			[
+				"mari",
+				"margin-bottom"
+			],
+			[
+				"font-f",
+				"font-family"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
+				"cur",
+				"currentPreview"
+			],
+			[
+				"rend",
+				"renderPdf"
+			],
+			[
+				"load",
+				"loading"
+			],
+			[
+				"add",
+				"addNew"
+			],
+			[
+				"row",
+				"rowdata"
+			],
+			[
+				"sett",
+				"setTotal"
+			],
+			[
+				"us",
+				"CurrentUsuario"
+			],
+			[
+				"Current",
+				"CurrentUsuario"
+			],
+			[
+				"Curr",
+				"CurrentUsuario"
+			],
+			[
+				"icon",
+				"iconRight"
+			],
+			[
+				"s",
+				"splice"
+			],
+			[
+				"remo",
+				"removeNumberSelecionado"
+			],
+			[
+				"ad",
+				"addNumberSelecionado"
+			],
+			[
+				"sle",
+				"selecionados"
+			],
+			[
+				"sele",
+				"selecionados"
+			],
+			[
+				"num",
+				"numberComprados"
+			],
+			[
+				"nm",
+				"numberRifa"
+			],
+			[
+				"stt",
+				"status-strip-label"
+			],
+			[
+				"mes",
+				"meses"
+			],
+			[
+				"Cur",
+				"CurrentMesIndex"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"bck",
+				"background-origin"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"off",
+				"offsetTop"
+			],
+			[
+				"dim",
+				"dimPopup"
+			],
+			[
+				"getdim",
+				"getDimRef"
+			],
+			[
+				"posi",
+				"positionRef"
+			],
+			[
+				"cli",
+				"clicked"
+			],
+			[
+				"class",
+				"classPosition"
+			],
+			[
+				"stat",
+				"StatusStrip"
+			],
+			[
+				"in",
+				"intervaloDatas"
+			],
+			[
+				"sl",
+				"splitHierarquia"
+			],
+			[
+				"unse",
+				"unset"
+			],
+			[
+				"file",
+				"fileRepositorio"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "ZapWeb/Public/modules/financeiro/service.js",
+			"settings":
+			{
+				"buffer_size": 6156,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ZapWeb/Public/app.config.js",
+			"settings":
+			{
+				"buffer_size": 2281,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"selected_items":
+		[
+			[
+				"package instal",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: CDATA"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/financeiro/receita/model.js",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/financeiro/receita/page/page.html",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/financeiro/receita/page/page.js",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/financeiro/centrocusto/model.js",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/financeiro/centrocusto/select/select.js",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/financeiro/despesa/page/page.js",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/financeiro/receita/search/row.js",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/financeiro/despesa/page/page.html",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/financeiro/despesa/model.js",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/financeiro/receita/search/page.js",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/usuario/model.js",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/unidade/model.js",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/financeiro/despesa/search/page.js",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/financeiro/despesa/search/table.js",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/financeiro/despesa/search/table.html",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/home/page.js",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/arquivo/painel.js",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/arquivo/thumb.html",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/arquivo/thumb.js",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/app.config.js",
+		"/C/Users/Manoel/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Manoel/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Manoel/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/app/app.css",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/categoria/modal/row.html",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/categoria/modal/modal.html",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/categoria/modal/modal.css",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/categoria/modal/modal.js",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/categoria/select/select.js",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/categoria/model.js",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/tarefa/resources/composer/composer.js",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/categoria/select/select.css",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/categoria/modal/modal.j",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/guia/popup/popup.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/guia/popup/popup.html",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/gogeo/gogeo.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/layer/model.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/home/page.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/mapa/widget.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/layer/layers.json",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/guia/item/item.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/guia/item/item.html",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/guia/item/item.css",
+		"/G/LocalHost/geoinova/igo/igo.web/module/iGo/View/layout.phtml",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/app.config.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/card/layer/layer.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/card/layer/layers.json",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/card/layer/model.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/search/box/box.js",
+		"/G/Cloud/Dropbox/JavaScript/pillar.ui/src/select2/jselect2.css",
+		"/G/Cloud/Dropbox/JavaScript/pillar.ui/src/select2/select2.css",
+		"/G/Cloud/Dropbox/JavaScript/pillar.ui/src/combobox/combobox.js",
+		"/G/Cloud/Dropbox/JavaScript/pillar.ui/src/select2/jselect2.js",
+		"/G/Cloud/Dropbox/JavaScript/pillar.ui/src/combobox/combobox.css",
+		"/G/Cloud/Dropbox/JavaScript/pillar.ui/src/select2/select2.html",
+		"/G/Cloud/Dropbox/JavaScript/pillar.ui/src/select2/select2.js",
+		"/G/Cloud/Dropbox/JavaScript/pillar.ui/src/textbox/textbox.css",
+		"/G/Cloud/Dropbox/JavaScript/pillar.ui/src/datebox/datepicker.css",
+		"/G/Cloud/Dropbox/JavaScript/pillar.ui/src/config.js",
+		"/G/Cloud/Dropbox/JavaScript/pillar.ui/src/button/button.css",
+		"/G/Cloud/Dropbox/JavaScript/pillar.ui/src/checkbox/checkbox.css",
+		"/G/Cloud/Dropbox/JavaScript/pillar.ui/src/combobox/combobox.html",
+		"/G/Cloud/Dropbox/JavaScript/pillar.ui/src/modal/modal.html",
+		"/G/Cloud/Dropbox/JavaScript/pillar.ui/src/modal/modal.css",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/tarefa/page/timeline/page.js",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/tarefa/page/timeline/page.html",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/config.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/lib/jquery/plugins/menu/menu.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/guia/popup/popup.css",
+		"/G/LocalHost/geoinova/igo/igo.web/public/lib/jquery/plugins/menu/menu.css",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/page/page.html",
+		"/G/LocalHost/geoinova/igo/igo.web/module/iGo/Model/Cidade/Cidade.php",
+		"/G/LocalHost/geoinova/igo/igo.web/module/iGo/Model/Cidade/CidadeRepositorio.php",
+		"/G/LocalHost/geoinova/igo/igo.web/public/lib/jquery/plugins/menu/menu.cs",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/home/loading.html",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/page/page.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/populacao/info/info.html",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/populacao/info/info.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/saude/info/info.html",
+		"/G/LocalHost/geoinova/igo/igo.web/public/lib/leaflet/plugins/cluster/leaflet.tilecluster.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/page/page.css",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/home/page.css",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/saude/info/info.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/escolas/info/info.html",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/propriedade_rural/info/info.html",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/propriedade_rural/info/info.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/balanca_comercial/info/info.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/escolas/info/info.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/balanca_comercial/info/info.html",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/util.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/salarios_empregos/info/info.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/salarios_empregos/info/info.html",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/granjas/info/info.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/granjas/info/info.html",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/eleitores/info/info.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/turismo/info/info.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/turismo/info/info.html",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/idm/info/info.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/idm/info/info.html",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/consumo_energia/info/info.html",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/consumo_energia/info/info.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/balanca_comercial/info/info.css",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/eleitores/info/info.html",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/saude/info/info.css",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/consumo_energia/info/info.css",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/guia/box/box.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/geral/info/info.js",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/fco/info/info.html",
+		"/G/LocalHost/geoinova/igo/igo.web/public/modules/painel/fco/info/info.js",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/tarefa/page/timeline/page.css",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/tarefa/resources/composer/composer.css",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/tarefa/resources/composer/composer.html",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/home/home.html",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/home/home.css",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/home/breadcumb.css",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/tarefa/service.js",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/home/home.js",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/tarefa/model.js",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/app/app.js",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/auth/app.js",
+		"/G/Cloud/Google Drive/Empresas/Siempre/Softwares/Juzz Personalite/Juzz Personalite/Public/modules/realtime/service.js",
+		"/G/Cloud/Dropbox/php/nas/public/app.js",
+		"/G/Cloud/Dropbox/php/nas/public/uploader.js",
+		"/G/Cloud/Dropbox/php/nas/public/ui/nas.js",
+		"/G/Cloud/Dropbox/php/nas/public/ui/uploader.js",
+		"/G/Cloud/Dropbox/php/nas/public/nas/nas.js",
+		"/G/Cloud/Dropbox/php/nas/module/Nas/Controller/FileController.php",
+		"/G/Cloud/Dropbox/php/nas/module/Siempre/Module.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"-G:\\Local\\drive\\library\\",
+			"-\\library",
+			"-/library",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"vermelho",
+			"td",
+			"head",
+			"		\n",
+			"Load",
+			"load",
+			"adicionar",
+			"modal",
+			"button",
+			"Obras - ",
+			"0.01",
+			"self",
+			"situacao",
+			"sed",
+			"geoAgg",
+			"geoSearchByGeom",
+			".attr('title', content)",
+			"bootst",
+			"addLayerOnMap",
+			"createMapLayer",
+			"sed",
+			"title",
+			"getMapClusterService",
+			"getMapRenderService",
+			"layername",
+			"sed",
+			"getLayerByNome",
+			"atrasada",
+			"sed",
+			"select2-dropdown",
+			"options",
+			"option",
+			"			<",
+			"NÃO INICIADA",
+			"sed",
+			"delay",
+			"Delay",
+			"delay",
+			"close",
+			"hide",
+			"menuitem",
+			"_create",
+			"ui-menu-icon",
+			"this",
+			"clear",
+			"parent",
+			"		    				ui.item.parent().html('<i class=\"fa fa-check text-success\"></i>' + ui.item.parent().html());\n",
+			"sed",
+			"guia-popup-menu",
+			"sed",
+			"legendaCard",
+			"span",
+			" ",
+			"div",
+			"sed",
+			"template_cluster",
+			"sed",
+			"loadingHtml",
+			"sed",
+			"float",
+			"int",
+			"eleitores",
+			"span",
+			"estado",
+			"geoSearch",
+			"gogeo",
+			"b",
+			"cluster-estado",
+			"gego",
+			"layer",
+			"span",
+			"0.01",
+			"bound",
+			"layer",
+			"self",
+			"bound",
+			"-",
+			"_southWest",
+			"d",
+			"wkt",
+			"options",
+			"obras",
+			"type",
+			"int",
+			"porcetagem",
+			"type",
+			"eleitores",
+			"int",
+			"porcentagem",
+			"Indicador taxa internação AVC 2010",
+			"saude",
+			"educacao",
+			"propriedade_rural",
+			"valor",
+			"Total propriedades",
+			"Valor aprovado",
+			"Emprego direto",
+			"fco",
+			"		\n",
+			";\n",
+			"5",
+			"10",
+			";\n",
+			"o",
+			"h3",
+			";\n",
+			"hover",
+			"18px",
+			"ccc",
+			"background",
+			"nas",
+			"http://nas.local/nas",
+			"getFullPathFromFile",
+			"getFullPathFromConta",
+			"id",
+			"name",
+			"expirado",
+			");\n",
+			"apikey",
+			"filePost",
+			"req",
+			"pi",
+			"temp",
+			"consumo_energia",
+			"\"den",
+			"proprie",
+			"consumo_energia",
+			"agua"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<span>$1</span>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "ZapWeb/Public/modules/financeiro/service.js",
+					"settings":
+					{
+						"buffer_size": 6156,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								765,
+								765
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "ZapWeb/Public/app.config.js",
+					"settings":
+					{
+						"buffer_size": 2281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1056.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 243.0,
+	"status_bar_visible": true
+}

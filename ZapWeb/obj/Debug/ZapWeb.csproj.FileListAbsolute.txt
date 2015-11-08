@@ -1,0 +1,120 @@
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\ZapWeb.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\ZapWeb.pdb
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\Newtonsoft.Json.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Net.Http.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Net.Http.WebRequest.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Web.Helpers.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Web.Mvc.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Web.Razor.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Web.WebPages.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Web.WebPages.Razor.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\Newtonsoft.Json.xml
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Net.Http.xml
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Net.Http.WebRequest.xml
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Web.Helpers.xml
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Web.Mvc.xml
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Web.Razor.xml
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Web.WebPages.xml
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Web.WebPages.Razor.xml
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\obj\Debug\ZapWeb.csprojResolveAssemblyReference.cache
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\obj\Debug\ZapWeb.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\obj\Debug\ZapWeb.pdb
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\Pillar.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\PetaPoco.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\Pillar.pdb
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\PetaPoco.pdb
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\Microsoft.AspNet.SignalR.Owin.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\Owin.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\RealTime.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\RealTime.pdb
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Web.Http.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Web.Http.WebHost.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Web.Http.xml
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Web.Http.WebHost.xml
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\MySql.Data.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Net.Http.Formatting.dll
+C:\Users\Manoel\Google Drive\Trabalho\Aguia Software\Clientes\Zap\Software\ZapWeb\bin\System.Net.Http.Formatting.xml
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\ZapWeb.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\ZapWeb.pdb
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Microsoft.AspNet.SignalR.Owin.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\MySql.Data.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Newtonsoft.Json.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Owin.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\RealTime.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Net.Http.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Net.Http.Formatting.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Net.Http.WebRequest.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Helpers.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Http.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Http.WebHost.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Mvc.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Razor.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.WebPages.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.WebPages.Razor.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\PetaPoco.pdb
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Pillar.pdb
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\RealTime.pdb
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Newtonsoft.Json.xml
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Net.Http.xml
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Net.Http.Formatting.xml
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Net.Http.WebRequest.xml
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Helpers.xml
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Http.xml
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Http.WebHost.xml
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Mvc.xml
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Razor.xml
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.WebPages.xml
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.WebPages.Razor.xml
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\obj\Debug\ZapWeb.csprojResolveAssemblyReference.cache
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\obj\Debug\ZapWeb.dll
+C:\Users\Manoel\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\obj\Debug\ZapWeb.pdb
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\ZapWeb.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\ZapWeb.pdb
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Microsoft.Web.Infrastructure.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\MySql.Data.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Newtonsoft.Json.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Net.Http.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Net.Http.Formatting.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Net.Http.WebRequest.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Helpers.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Http.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Http.WebHost.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Mvc.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Razor.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.WebPages.Deployment.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.WebPages.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.WebPages.Razor.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\PetaPoco.pdb
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Pillar.pdb
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Newtonsoft.Json.xml
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Net.Http.xml
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Net.Http.Formatting.xml
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Net.Http.WebRequest.xml
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Helpers.xml
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Http.xml
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Http.WebHost.xml
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Mvc.xml
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.Razor.xml
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.WebPages.xml
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.WebPages.Deployment.xml
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\System.Web.WebPages.Razor.xml
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\obj\Debug\ZapWeb.csprojResolveAssemblyReference.cache
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\obj\Debug\ZapWeb.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\obj\Debug\ZapWeb.pdb
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Pillar.dll
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\ZapWeb.dll.config

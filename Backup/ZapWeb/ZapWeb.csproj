@@ -1,0 +1,751 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D80A5DB-A15C-40FA-905A-1D1FE32CC487}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZapWeb</RootNamespace>
+    <AssemblyName>ZapWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>..\..\..\..\..\..\..\Documents\Visual Studio 2012\Projects\RealTime\bin\Release\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Owin">
+      <HintPath>..\..\..\..\..\..\..\Documents\Visual Studio 2012\Projects\RealTime\bin\Release\Microsoft.AspNet.SignalR.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
+      <HintPath>..\..\..\..\..\..\..\Documents\Visual Studio 2012\Projects\RealTime\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\..\..\..\..\..\..\Documents\Visual Studio 2012\Projects\RealTime\bin\Release\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.8.6\Assemblies\v4.0\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\..\..\..\..\..\..\Documents\Visual Studio 2012\Projects\RealTime\bin\Release\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="PetaPoco, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Projeto Asus\Source\PetaPoco\PetaPoco\bin\Release\PetaPoco.dll</HintPath>
+    </Reference>
+    <Reference Include="Pillar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Dropbox\Visual Studio Projects\Pillar\bin\Debug\Pillar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Lib\DataBaseParam.cs" />
+    <Compile Include="Mvc\Controllers\AuthController.cs" />
+    <Compile Include="Mvc\Controllers\CidadeController.cs" />
+    <Compile Include="Mvc\Controllers\CentroCustoController.cs" />
+    <Compile Include="Mvc\Controllers\ArquivoController.cs" />
+    <Compile Include="Mvc\Controllers\RealTimeController.cs" />
+    <Compile Include="Mvc\Controllers\ReceitaRelatorioController.cs" />
+    <Compile Include="Mvc\Controllers\DespesaRelatorioController.cs" />
+    <Compile Include="Mvc\Controllers\ReceitaController.cs" />
+    <Compile Include="Mvc\Controllers\NotificacaoController.cs" />
+    <Compile Include="Mvc\Controllers\DespesaController.cs" />
+    <Compile Include="Mvc\Controllers\FornecedorController.cs" />
+    <Compile Include="Mvc\Controllers\UnidadeController.cs" />
+    <Compile Include="Mvc\Controllers\UsuarioController.cs" />
+    <Compile Include="Mvc\Controllers\GrupoPermissaoController.cs" />
+    <Compile Include="Mvc\Controllers\PermissaoController.cs" />
+    <Compile Include="Mvc\Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\Mvc\BusinessLogic.cs" />
+    <Compile Include="Lib\Mvc\Controller.cs" />
+    <Compile Include="Lib\Mvc\Repositorio.cs" />
+    <Compile Include="Mvc\Models\Arquivo\Arquivo.cs" />
+    <Compile Include="Mvc\Models\Arquivo\ArquivoRules.cs" />
+    <Compile Include="Mvc\Models\Arquivo\ArquivoRepositorio.cs" />
+    <Compile Include="Mvc\Models\Cidade\Cidade.cs" />
+    <Compile Include="Mvc\Models\Cidade\CidadeRepositorio.cs" />
+    <Compile Include="Mvc\Models\Contato\Contato.cs" />
+    <Compile Include="Mvc\Models\Contato\ContatoRepositorio.cs" />
+    <Compile Include="Mvc\Models\Financeiro\CentroCusto\CentroCusto.cs" />
+    <Compile Include="Mvc\Models\Financeiro\CentroCusto\CentroCustoRepositorio.cs" />
+    <Compile Include="Mvc\Models\Financeiro\CentroCusto\CentroCustoRules.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Despesa\Relatorio\CentroCustoUnidade.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Despesa\Relatorio\DespesaRelatorioRepositorio.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Despesa\Relatorio\DespesaCentroCusto.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Despesa\DespesaPesquisa.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Despesa\DespesaHistoricoRepositorio.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Despesa\DespesaHistorico.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Despesa\DespesaRules.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Item\FinanceiroItemRepositorio.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Item\FinanceiroItem.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Despesa\Despesa.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Despesa\DespesaRepositorio.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Receita\ReceitaRepositorio.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Receita\ReceitaRules.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Receita\Receita.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Receita\ReceitaItem.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Despesa\Relatorio\DespesaRelatorioRules.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Receita\Relatorio\ReceitaCentral.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Receita\Relatorio\ReceitaRelatorioRepositorio.cs" />
+    <Compile Include="Mvc\Models\Financeiro\Receita\Relatorio\ReceitaRelatorioRules.cs" />
+    <Compile Include="Mvc\Models\Fornecedor\FornecedorPesquisa.cs" />
+    <Compile Include="Mvc\Models\Notificacao\NotificacaoUsuarioRepositorio.cs" />
+    <Compile Include="Mvc\Models\Notificacao\NotificacaoRepositorio.cs" />
+    <Compile Include="Mvc\Models\Notificacao\Notificacao.cs" />
+    <Compile Include="Mvc\Models\Notificacao\NotificacaoRules.cs" />
+    <Compile Include="Mvc\Models\Notificacao\NotificacaoUsuario.cs" />
+    <Compile Include="Mvc\Models\RealTime\RealTime.cs" />
+    <Compile Include="Mvc\Models\RealTime\RealTimeRepositorio.cs" />
+    <Compile Include="Mvc\Models\TableDependency\TableDependency.cs" />
+    <Compile Include="Mvc\Models\Telefone\TelefoneRepositorio.cs" />
+    <Compile Include="Mvc\Models\Telefone\Telefone.cs" />
+    <Compile Include="Mvc\Models\Endereco\Endereco.cs" />
+    <Compile Include="Mvc\Models\Endereco\EnderecoRepositorio.cs" />
+    <Compile Include="Mvc\Models\Fornecedor\Fornecedor.cs" />
+    <Compile Include="Mvc\Models\Fornecedor\FornecedorRepositorio.cs" />
+    <Compile Include="Mvc\Models\Fornecedor\FornecedorRules.cs" />
+    <Compile Include="Mvc\Models\Usuario\UsuarioRules.cs" />
+    <Compile Include="Mvc\Models\Permissao\PermissaoRepositorio.cs" />
+    <Compile Include="Mvc\Models\Permissao\GrupoPermisaoRules.cs" />
+    <Compile Include="Mvc\Models\Permissao\Permissao.cs" />
+    <Compile Include="Mvc\Models\Permissao\GrupoPermissao.cs" />
+    <Compile Include="Mvc\Models\Permissao\GrupoPermissaoRepositorio.cs" />
+    <Compile Include="Mvc\Models\Permissao\TipoPermissao.cs" />
+    <Compile Include="Mvc\Models\Permissao\TipoPermissaoRepositorio.cs" />
+    <Compile Include="Mvc\Models\Usuario\Usuario.cs" />
+    <Compile Include="Mvc\Models\Usuario\UsuarioRepositorio.cs" />
+    <Compile Include="Mvc\Models\Session\SessionRepositorio.cs" />
+    <Compile Include="Mvc\Models\Session\Session.cs" />
+    <Compile Include="Mvc\Models\Auth\AuthRules.cs" />
+    <Compile Include="Mvc\Models\Account\Account.cs" />
+    <Compile Include="Mvc\Models\Account\AccountRepositorio.cs" />
+    <Compile Include="Mvc\Models\Unidade\UnidadeRules.cs" />
+    <Compile Include="Mvc\Models\Unidade\UnidadeRepositorio.cs" />
+    <Compile Include="Mvc\Models\Unidade\Unidade.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="App_Data\messages.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="Public\app.config.js" />
+    <Content Include="Public\auth.js" />
+    <Content Include="Public\app.js" />
+    <Content Include="Public\app.css" />
+    <Content Include="Public\bootstrap\css\app.css" />
+    <Content Include="Public\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="Public\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="Public\bootstrap\css\bootstrap.css" />
+    <Content Include="Public\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Public\bootstrap\css\font-awesome.min.css" />
+    <Content Include="Public\bootstrap\css\font.css" />
+    <Content Include="Public\bootstrap\css\simple-line-icons.css" />
+    <Content Include="Public\bootstrap\fonts\fontawesome-webfont.svg" />
+    <Content Include="Public\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Public\bootstrap\fonts\Simple-Line-Icons.dev.svg" />
+    <Content Include="Public\bootstrap\fonts\Simple-Line-Icons.svg" />
+    <Content Include="Public\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Public\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Public\bootstrap\js\bootstrap.js" />
+    <Content Include="Public\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Public\files\logo.png" />
+    <Content Include="Public\lib\autocomplete\autocomplete.css" />
+    <Content Include="Public\lib\autocomplete\autocomplete.js" />
+    <Content Include="Public\lib\datatime\datatime.js" />
+    <Content Include="Public\lib\datatime\week.js" />
+    <Content Include="Public\lib\drag\drag.js" />
+    <Content Include="Public\lib\jquery\jquery.js" />
+    <Content Include="Public\lib\pillar\ui\alert\alert.css" />
+    <Content Include="Public\lib\pillar\ui\alert\alert.html" />
+    <Content Include="Public\lib\pillar\ui\alert\alert.js" />
+    <Content Include="Public\lib\pillar\ui\autocomplete\autocomplete.css" />
+    <Content Include="Public\lib\pillar\ui\autocomplete\autocomplete.html" />
+    <Content Include="Public\lib\pillar\ui\autocomplete\autocomplete.js" />
+    <Content Include="Public\lib\pillar\ui\button\button.css" />
+    <Content Include="Public\lib\pillar\ui\button\button.html" />
+    <Content Include="Public\lib\pillar\ui\button\button.js" />
+    <Content Include="Public\lib\pillar\ui\checkbox\checkbox.css" />
+    <Content Include="Public\lib\pillar\ui\checkbox\checkbox.html" />
+    <Content Include="Public\lib\pillar\ui\checkbox\checkbox.js" />
+    <Content Include="Public\lib\pillar\ui\confirm\confirm.css" />
+    <Content Include="Public\lib\pillar\ui\confirm\confirm.html" />
+    <Content Include="Public\lib\pillar\ui\confirm\confirm.js" />
+    <Content Include="Public\lib\pillar\ui\contextmenu\contextmenu.css" />
+    <Content Include="Public\lib\pillar\ui\contextmenu\contextmenu.html" />
+    <Content Include="Public\lib\pillar\ui\contextmenu\contextmenu.js" />
+    <Content Include="Public\lib\pillar\ui\contextmenu\item.html" />
+    <Content Include="Public\lib\pillar\ui\contextmenu\item.js" />
+    <Content Include="Public\lib\pillar\ui\contextmenu\shdw_bottom.png" />
+    <Content Include="Public\lib\pillar\ui\contextmenu\shdw_bottom_right.png" />
+    <Content Include="Public\lib\pillar\ui\contextmenu\shdw_right.png" />
+    <Content Include="Public\lib\pillar\ui\datebox\datebox.css" />
+    <Content Include="Public\lib\pillar\ui\datebox\datebox.html" />
+    <Content Include="Public\lib\pillar\ui\datebox\datebox.js" />
+    <Content Include="Public\lib\pillar\ui\datebox\datepicker.css" />
+    <Content Include="Public\lib\pillar\ui\datebox\datepicker.js" />
+    <Content Include="Public\lib\pillar\ui\dialog\dialog.css" />
+    <Content Include="Public\lib\pillar\ui\dialog\dialog.html" />
+    <Content Include="Public\lib\pillar\ui\dialog\dialog.js" />
+    <Content Include="Public\lib\pillar\ui\dialog\icons.png" />
+    <Content Include="Public\lib\pillar\ui\element\element.js" />
+    <Content Include="Public\lib\pillar\ui\evidence\evidence.css" />
+    <Content Include="Public\lib\pillar\ui\evidence\evidence.html" />
+    <Content Include="Public\lib\pillar\ui\evidence\evidence.js" />
+    <Content Include="Public\lib\pillar\ui\label\label.css" />
+    <Content Include="Public\lib\pillar\ui\label\label.js" />
+    <Content Include="Public\lib\pillar\ui\label\points.png" />
+    <Content Include="Public\lib\pillar\ui\listitem\arrow.png" />
+    <Content Include="Public\lib\pillar\ui\listitem\item.css" />
+    <Content Include="Public\lib\pillar\ui\listitem\item.html" />
+    <Content Include="Public\lib\pillar\ui\listitem\item.js" />
+    <Content Include="Public\lib\pillar\ui\listitem\list.css" />
+    <Content Include="Public\lib\pillar\ui\listitem\list.html" />
+    <Content Include="Public\lib\pillar\ui\listitem\list.js" />
+    <Content Include="Public\lib\pillar\ui\loadmore\loadmore.css" />
+    <Content Include="Public\lib\pillar\ui\loadmore\loadmore.js" />
+    <Content Include="Public\lib\pillar\ui\marktext\marktext.js" />
+    <Content Include="Public\lib\pillar\ui\menudown\dw.png" />
+    <Content Include="Public\lib\pillar\ui\menudown\menudown.css" />
+    <Content Include="Public\lib\pillar\ui\menudown\menudown.html" />
+    <Content Include="Public\lib\pillar\ui\menudown\menudown.js" />
+    <Content Include="Public\lib\pillar\ui\menudown\menudownitem.css" />
+    <Content Include="Public\lib\pillar\ui\menudown\menudownitem.html" />
+    <Content Include="Public\lib\pillar\ui\menudown\menudownitem.js" />
+    <Content Include="Public\lib\pillar\ui\menu\item.css" />
+    <Content Include="Public\lib\pillar\ui\menu\item.html" />
+    <Content Include="Public\lib\pillar\ui\menu\item.js" />
+    <Content Include="Public\lib\pillar\ui\menu\menu.css" />
+    <Content Include="Public\lib\pillar\ui\menu\menu.html" />
+    <Content Include="Public\lib\pillar\ui\menu\menu.js" />
+    <Content Include="Public\lib\pillar\ui\menu\menubar.css" />
+    <Content Include="Public\lib\pillar\ui\menu\menubar.html" />
+    <Content Include="Public\lib\pillar\ui\menu\menubar.js" />
+    <Content Include="Public\lib\pillar\ui\menu\separador.css" />
+    <Content Include="Public\lib\pillar\ui\menu\separador.html" />
+    <Content Include="Public\lib\pillar\ui\menu\separador.js" />
+    <Content Include="Public\lib\pillar\ui\modal\modal.css" />
+    <Content Include="Public\lib\pillar\ui\modal\modal.html" />
+    <Content Include="Public\lib\pillar\ui\modal\modal.js" />
+    <Content Include="Public\lib\pillar\ui\modal\modal.png" />
+    <Content Include="Public\lib\pillar\ui\paging\pagination.js" />
+    <Content Include="Public\lib\pillar\ui\paging\pagination.min.js" />
+    <Content Include="Public\lib\pillar\ui\paging\paging.js" />
+    <Content Include="Public\lib\pillar\ui\popup\popup.css" />
+    <Content Include="Public\lib\pillar\ui\popup\popup.html" />
+    <Content Include="Public\lib\pillar\ui\popup\popup.js" />
+    <Content Include="Public\lib\pillar\ui\progress\progress.css" />
+    <Content Include="Public\lib\pillar\ui\progress\progress.html" />
+    <Content Include="Public\lib\pillar\ui\progress\progress.js" />
+    <Content Include="Public\lib\pillar\ui\radiobox\radiobox.js" />
+    <Content Include="Public\lib\pillar\ui\search\containers\containers.css" />
+    <Content Include="Public\lib\pillar\ui\search\containers\containers.html" />
+    <Content Include="Public\lib\pillar\ui\search\containers\containers.js" />
+    <Content Include="Public\lib\pillar\ui\search\search.css" />
+    <Content Include="Public\lib\pillar\ui\search\search.html" />
+    <Content Include="Public\lib\pillar\ui\search\search.js" />
+    <Content Include="Public\lib\pillar\ui\selection\arrow-up-down.png" />
+    <Content Include="Public\lib\pillar\ui\selection\base.js" />
+    <Content Include="Public\lib\pillar\ui\selection\button.css" />
+    <Content Include="Public\lib\pillar\ui\selection\button.html" />
+    <Content Include="Public\lib\pillar\ui\selection\button.js" />
+    <Content Include="Public\lib\pillar\ui\selection\check.png" />
+    <Content Include="Public\lib\pillar\ui\selection\item.css" />
+    <Content Include="Public\lib\pillar\ui\selection\item.html" />
+    <Content Include="Public\lib\pillar\ui\selection\item.js" />
+    <Content Include="Public\lib\pillar\ui\selection\resize.js" />
+    <Content Include="Public\lib\pillar\ui\selection\selection.css" />
+    <Content Include="Public\lib\pillar\ui\selection\selection.html" />
+    <Content Include="Public\lib\pillar\ui\selection\selection.js" />
+    <Content Include="Public\lib\pillar\ui\selection\separador.css" />
+    <Content Include="Public\lib\pillar\ui\selection\separador.js" />
+    <Content Include="Public\lib\pillar\ui\statusstrip\item.js" />
+    <Content Include="Public\lib\pillar\ui\statusstrip\label.js" />
+    <Content Include="Public\lib\pillar\ui\statusstrip\separator.js" />
+    <Content Include="Public\lib\pillar\ui\statusstrip\statusstrip.css" />
+    <Content Include="Public\lib\pillar\ui\statusstrip\statusstrip.html" />
+    <Content Include="Public\lib\pillar\ui\statusstrip\statusstrip.js" />
+    <Content Include="Public\lib\pillar\ui\tabbar\tabbar.css" />
+    <Content Include="Public\lib\pillar\ui\tabbar\tabbar.js" />
+    <Content Include="Public\lib\pillar\ui\tabview\tabview.js" />
+    <Content Include="Public\lib\pillar\ui\tag\close.png" />
+    <Content Include="Public\lib\pillar\ui\tag\tag.css" />
+    <Content Include="Public\lib\pillar\ui\tag\tag.js" />
+    <Content Include="Public\lib\pillar\ui\textareatoken\close.png" />
+    <Content Include="Public\lib\pillar\ui\textareatoken\textareatoken.css" />
+    <Content Include="Public\lib\pillar\ui\textareatoken\textareatoken.html" />
+    <Content Include="Public\lib\pillar\ui\textareatoken\textareatoken.js" />
+    <Content Include="Public\lib\pillar\ui\textareatoken\textareatokendata.css" />
+    <Content Include="Public\lib\pillar\ui\textareatoken\textareatokendata.html" />
+    <Content Include="Public\lib\pillar\ui\textareatoken\textareatokendata.js" />
+    <Content Include="Public\lib\pillar\ui\textarea\autosize.js" />
+    <Content Include="Public\lib\pillar\ui\textarea\textarea.css" />
+    <Content Include="Public\lib\pillar\ui\textarea\textarea.html" />
+    <Content Include="Public\lib\pillar\ui\textarea\textarea.js" />
+    <Content Include="Public\lib\pillar\ui\textboxselect\close.png" />
+    <Content Include="Public\lib\pillar\ui\textboxselect\textboxselect.css" />
+    <Content Include="Public\lib\pillar\ui\textboxselect\textboxselect.html" />
+    <Content Include="Public\lib\pillar\ui\textboxselect\textboxselect.js" />
+    <Content Include="Public\lib\pillar\ui\textbox\mask.js" />
+    <Content Include="Public\lib\pillar\ui\textbox\textbox.css" />
+    <Content Include="Public\lib\pillar\ui\textbox\textbox.html" />
+    <Content Include="Public\lib\pillar\ui\textbox\textbox.js" />
+    <Content Include="Public\lib\pillar\ui\treeview\line_conn.gif" />
+    <Content Include="Public\lib\pillar\ui\treeview\node.js" />
+    <Content Include="Public\lib\pillar\ui\treeview\treeview.html" />
+    <Content Include="Public\lib\pillar\ui\treeview\treeview.js" />
+    <Content Include="Public\lib\pillar\ui\treeview\ztree.js" />
+    <Content Include="Public\lib\pillar\ui\treeview\zTreeStandard.gif" />
+    <Content Include="Public\lib\pillar\ui\treeview\zTreeStandard.png" />
+    <Content Include="Public\lib\pillar\ui\treeview\zTreeStyle.css" />
+    <Content Include="Public\lib\pillar\ui\upload\upload.css" />
+    <Content Include="Public\lib\pillar\ui\upload\upload.html" />
+    <Content Include="Public\lib\pillar\ui\upload\upload.js" />
+    <Content Include="Public\lib\scroll\scroll.js" />
+    <Content Include="Public\lib\signalR\signalR.js" />
+    <Content Include="Public\lib\tablefilter\tablefilter.js" />
+    <Content Include="Public\lib\tableOrder\down-arrow.png" />
+    <Content Include="Public\lib\tableOrder\tableorder.css" />
+    <Content Include="Public\lib\tableOrder\tableorder.js" />
+    <Content Include="Public\lib\tableOrder\up-arrow.png" />
+    <Content Include="Public\lib\tips\tip-yellowsimple_arrows.gif" />
+    <Content Include="Public\lib\tips\tips.css" />
+    <Content Include="Public\lib\tips\tips.js" />
+    <Content Include="Public\lib\zoom\mousewheel.js" />
+    <Content Include="Public\lib\zoom\zoom.js" />
+    <Content Include="Public\modules\arquivo\add.png" />
+    <Content Include="Public\modules\arquivo\delete.png" />
+    <Content Include="Public\modules\arquivo\download.png" />
+    <Content Include="Public\modules\arquivo\edit.png" />
+    <Content Include="Public\modules\arquivo\modal\modal.css" />
+    <Content Include="Public\modules\arquivo\modal\modal.html" />
+    <Content Include="Public\modules\arquivo\modal\modal.js" />
+    <Content Include="Public\modules\arquivo\model.js" />
+    <Content Include="Public\modules\arquivo\open.png" />
+    <Content Include="Public\modules\arquivo\painel.css" />
+    <Content Include="Public\modules\arquivo\painel.html" />
+    <Content Include="Public\modules\arquivo\painel.js" />
+    <Content Include="Public\modules\arquivo\pdf.png" />
+    <Content Include="Public\modules\arquivo\preview\close.png" />
+    <Content Include="Public\modules\arquivo\preview\modal.png" />
+    <Content Include="Public\modules\arquivo\preview\preview.css" />
+    <Content Include="Public\modules\arquivo\preview\preview.html" />
+    <Content Include="Public\modules\arquivo\preview\preview.js" />
+    <Content Include="Public\modules\arquivo\thumb.css" />
+    <Content Include="Public\modules\arquivo\thumb.html" />
+    <Content Include="Public\modules\arquivo\thumb.js" />
+    <Content Include="Public\modules\arquivo\view.png" />
+    <Content Include="Public\modules\auth\model.js" />
+    <Content Include="Public\modules\auth\page.css" />
+    <Content Include="Public\modules\auth\page.html" />
+    <Content Include="Public\modules\auth\page.js" />
+    <Content Include="Public\modules\cidade\model.js" />
+    <Content Include="Public\modules\cidade\search\textbox.js" />
+    <Content Include="Public\modules\contato\model.js" />
+    <Content Include="Public\modules\contato\painel.css" />
+    <Content Include="Public\modules\contato\painel.html" />
+    <Content Include="Public\modules\contato\painel.js" />
+    <Content Include="Public\modules\endereco\model.js" />
+    <Content Include="Public\modules\endereco\painel.css" />
+    <Content Include="Public\modules\endereco\painel.html" />
+    <Content Include="Public\modules\endereco\painel.js" />
+    <Content Include="Public\modules\financeiro\centrocusto\modal\modal.css" />
+    <Content Include="Public\modules\financeiro\centrocusto\modal\modal.html" />
+    <Content Include="Public\modules\financeiro\centrocusto\modal\modal.js" />
+    <Content Include="Public\modules\financeiro\centrocusto\modal\seta.png" />
+    <Content Include="Public\modules\financeiro\centrocusto\model.js" />
+    <Content Include="Public\modules\financeiro\centrocusto\select\select.js" />
+    <Content Include="Public\modules\financeiro\centrocusto\select\seta.png" />
+    <Content Include="Public\modules\financeiro\despesa\justificativa\modal.html" />
+    <Content Include="Public\modules\financeiro\despesa\justificativa\modal.js" />
+    <Content Include="Public\modules\financeiro\despesa\model.js" />
+    <Content Include="Public\modules\financeiro\despesa\page\page.css" />
+    <Content Include="Public\modules\financeiro\despesa\page\page.html" />
+    <Content Include="Public\modules\financeiro\despesa\page\page.js" />
+    <Content Include="Public\modules\financeiro\despesa\relatorio\central\page.css" />
+    <Content Include="Public\modules\financeiro\despesa\relatorio\central\page.html" />
+    <Content Include="Public\modules\financeiro\despesa\relatorio\central\page.js" />
+    <Content Include="Public\modules\financeiro\despesa\relatorio\central\unidade.html" />
+    <Content Include="Public\modules\financeiro\despesa\relatorio\model.js" />
+    <Content Include="Public\modules\financeiro\despesa\relatorio\relatorio.css" />
+    <Content Include="Public\modules\financeiro\despesa\relatorio\unidade\page.css" />
+    <Content Include="Public\modules\financeiro\despesa\relatorio\unidade\page.html" />
+    <Content Include="Public\modules\financeiro\despesa\relatorio\unidade\page.js" />
+    <Content Include="Public\modules\financeiro\despesa\relatorio\zap\page.css" />
+    <Content Include="Public\modules\financeiro\despesa\relatorio\zap\page.html" />
+    <Content Include="Public\modules\financeiro\despesa\relatorio\zap\page.js" />
+    <Content Include="Public\modules\financeiro\despesa\relatorio\zap\unidade.html" />
+    <Content Include="Public\modules\financeiro\despesa\search\check.png" />
+    <Content Include="Public\modules\financeiro\despesa\search\edit.png" />
+    <Content Include="Public\modules\financeiro\despesa\search\model.js" />
+    <Content Include="Public\modules\financeiro\despesa\search\open.png" />
+    <Content Include="Public\modules\financeiro\despesa\search\order.js" />
+    <Content Include="Public\modules\financeiro\despesa\search\page.css" />
+    <Content Include="Public\modules\financeiro\despesa\search\page.html" />
+    <Content Include="Public\modules\financeiro\despesa\search\page.js" />
+    <Content Include="Public\modules\financeiro\despesa\search\popup.js" />
+    <Content Include="Public\modules\financeiro\despesa\search\table.css" />
+    <Content Include="Public\modules\financeiro\despesa\search\table.html" />
+    <Content Include="Public\modules\financeiro\despesa\search\table.js" />
+    <Content Include="Public\modules\financeiro\item\model.js" />
+    <Content Include="Public\modules\financeiro\item\row.css" />
+    <Content Include="Public\modules\financeiro\item\row.html" />
+    <Content Include="Public\modules\financeiro\item\row.js" />
+    <Content Include="Public\modules\financeiro\item\table.css" />
+    <Content Include="Public\modules\financeiro\item\table.html" />
+    <Content Include="Public\modules\financeiro\item\table.js" />
+    <Content Include="Public\modules\financeiro\receita\model.js" />
+    <Content Include="Public\modules\financeiro\receita\page.js" />
+    <Content Include="Public\modules\financeiro\receita\page\page.css" />
+    <Content Include="Public\modules\financeiro\receita\page\page.html" />
+    <Content Include="Public\modules\financeiro\receita\page\page.js" />
+    <Content Include="Public\modules\financeiro\receita\relatorio\central\page.css" />
+    <Content Include="Public\modules\financeiro\receita\relatorio\central\page.html" />
+    <Content Include="Public\modules\financeiro\receita\relatorio\central\page.js" />
+    <Content Include="Public\modules\financeiro\receita\relatorio\model.js" />
+    <Content Include="Public\modules\financeiro\receita\relatorio\unidade\page.css" />
+    <Content Include="Public\modules\financeiro\receita\relatorio\unidade\page.html" />
+    <Content Include="Public\modules\financeiro\receita\relatorio\unidade\page.js" />
+    <Content Include="Public\modules\financeiro\receita\relatorio\zap\page.css" />
+    <Content Include="Public\modules\financeiro\receita\relatorio\zap\page.html" />
+    <Content Include="Public\modules\financeiro\receita\relatorio\zap\page.js" />
+    <Content Include="Public\modules\financeiro\receita\search\page.css" />
+    <Content Include="Public\modules\financeiro\receita\search\page.html" />
+    <Content Include="Public\modules\financeiro\receita\search\page.js" />
+    <Content Include="Public\modules\financeiro\receita\search\row.html" />
+    <Content Include="Public\modules\financeiro\receita\search\row.js" />
+    <Content Include="Public\modules\financeiro\receita\table\model.js" />
+    <Content Include="Public\modules\financeiro\receita\table\row.html" />
+    <Content Include="Public\modules\financeiro\receita\table\row.js" />
+    <Content Include="Public\modules\financeiro\receita\table\table.css" />
+    <Content Include="Public\modules\financeiro\receita\table\table.html" />
+    <Content Include="Public\modules\financeiro\receita\table\table.js" />
+    <Content Include="Public\modules\financeiro\service.js" />
+    <Content Include="Public\modules\financeiro\status\select.js" />
+    <Content Include="Public\modules\fornecedor\model.js" />
+    <Content Include="Public\modules\fornecedor\page\page.css" />
+    <Content Include="Public\modules\fornecedor\page\page.html" />
+    <Content Include="Public\modules\fornecedor\page\page.js" />
+    <Content Include="Public\modules\fornecedor\search\model.js" />
+    <Content Include="Public\modules\fornecedor\search\page.css" />
+    <Content Include="Public\modules\fornecedor\search\page.html" />
+    <Content Include="Public\modules\fornecedor\search\page.js" />
+    <Content Include="Public\modules\fornecedor\search\textbox.js" />
+    <Content Include="Public\modules\fornecedor\service.js" />
+    <Content Include="Public\modules\fornecedor\table\row.css" />
+    <Content Include="Public\modules\fornecedor\table\row.html" />
+    <Content Include="Public\modules\fornecedor\table\row.js" />
+    <Content Include="Public\modules\fornecedor\table\table.css" />
+    <Content Include="Public\modules\fornecedor\table\table.html" />
+    <Content Include="Public\modules\fornecedor\table\table.js" />
+    <Content Include="Public\modules\historico\item.css" />
+    <Content Include="Public\modules\historico\item.html" />
+    <Content Include="Public\modules\historico\item.js" />
+    <Content Include="Public\modules\historico\model.js" />
+    <Content Include="Public\modules\historico\painel.css" />
+    <Content Include="Public\modules\historico\painel.html" />
+    <Content Include="Public\modules\historico\painel.js" />
+    <Content Include="Public\modules\home\logotipo.png" />
+    <Content Include="Public\modules\home\page.css" />
+    <Content Include="Public\modules\home\page.html" />
+    <Content Include="Public\modules\home\page.js" />
+    <Content Include="Public\modules\notificacao\button\button.css" />
+    <Content Include="Public\modules\notificacao\button\button.html" />
+    <Content Include="Public\modules\notificacao\button\button.js" />
+    <Content Include="Public\modules\notificacao\model.js" />
+    <Content Include="Public\modules\notificacao\page\item.css" />
+    <Content Include="Public\modules\notificacao\page\item.html" />
+    <Content Include="Public\modules\notificacao\page\item.js" />
+    <Content Include="Public\modules\notificacao\page\opstripe.png" />
+    <Content Include="Public\modules\notificacao\page\page.css" />
+    <Content Include="Public\modules\notificacao\page\page.html" />
+    <Content Include="Public\modules\notificacao\page\page.js" />
+    <Content Include="Public\modules\notificacao\popup\item.css" />
+    <Content Include="Public\modules\notificacao\popup\item.html" />
+    <Content Include="Public\modules\notificacao\popup\item.js" />
+    <Content Include="Public\modules\notificacao\popup\opstripe.png" />
+    <Content Include="Public\modules\notificacao\popup\popup.css" />
+    <Content Include="Public\modules\notificacao\popup\popup.html" />
+    <Content Include="Public\modules\notificacao\popup\popup.js" />
+    <Content Include="Public\modules\notificacao\service.js" />
+    <Content Include="Public\modules\permissao\grupo.model.js" />
+    <Content Include="Public\modules\permissao\modal\modal.css" />
+    <Content Include="Public\modules\permissao\modal\modal.html" />
+    <Content Include="Public\modules\permissao\modal\modal.js" />
+    <Content Include="Public\modules\permissao\model.js" />
+    <Content Include="Public\modules\permissao\page\page.css" />
+    <Content Include="Public\modules\permissao\page\page.html" />
+    <Content Include="Public\modules\permissao\page\page.js" />
+    <Content Include="Public\modules\permissao\painel\item.js" />
+    <Content Include="Public\modules\permissao\painel\painel.css" />
+    <Content Include="Public\modules\permissao\painel\painel.html" />
+    <Content Include="Public\modules\permissao\painel\painel.js" />
+    <Content Include="Public\modules\permissao\select\select.js" />
+    <Content Include="Public\modules\permissao\service.js" />
+    <Content Include="Public\modules\permissao\table\row.css" />
+    <Content Include="Public\modules\permissao\table\row.html" />
+    <Content Include="Public\modules\permissao\table\row.js" />
+    <Content Include="Public\modules\permissao\table\table.css" />
+    <Content Include="Public\modules\permissao\table\table.html" />
+    <Content Include="Public\modules\permissao\table\table.js" />
+    <Content Include="Public\modules\realtime\service.js" />
+    <Content Include="Public\modules\telefone\item.css" />
+    <Content Include="Public\modules\telefone\item.html" />
+    <Content Include="Public\modules\telefone\item.js" />
+    <Content Include="Public\modules\telefone\painel.css" />
+    <Content Include="Public\modules\telefone\painel.html" />
+    <Content Include="Public\modules\telefone\painel.js" />
+    <Content Include="Public\modules\unidade\label\label.css" />
+    <Content Include="Public\modules\unidade\label\label.html" />
+    <Content Include="Public\modules\unidade\label\label.js" />
+    <Content Include="Public\modules\unidade\modal\modal.html" />
+    <Content Include="Public\modules\unidade\modal\modal.js" />
+    <Content Include="Public\modules\unidade\model.js" />
+    <Content Include="Public\modules\unidade\page\page.css" />
+    <Content Include="Public\modules\unidade\page\page.html" />
+    <Content Include="Public\modules\unidade\page\page.js" />
+    <Content Include="Public\modules\unidade\popup\popup.css" />
+    <Content Include="Public\modules\unidade\popup\popup.html" />
+    <Content Include="Public\modules\unidade\popup\popup.js" />
+    <Content Include="Public\modules\unidade\search\page.css" />
+    <Content Include="Public\modules\unidade\search\page.html" />
+    <Content Include="Public\modules\unidade\search\page.js" />
+    <Content Include="Public\modules\unidade\search\textbox.js" />
+    <Content Include="Public\modules\unidade\select\select.js" />
+    <Content Include="Public\modules\unidade\service.js" />
+    <Content Include="Public\modules\unidade\table\row.css" />
+    <Content Include="Public\modules\unidade\table\row.html" />
+    <Content Include="Public\modules\unidade\table\row.js" />
+    <Content Include="Public\modules\unidade\table\table.css" />
+    <Content Include="Public\modules\unidade\table\table.html" />
+    <Content Include="Public\modules\unidade\table\table.js" />
+    <Content Include="Public\modules\unidade\tipo.unidade.js" />
+    <Content Include="Public\modules\unidade\tipo\select.js" />
+    <Content Include="Public\modules\usuario\label\label.css" />
+    <Content Include="Public\modules\usuario\label\label.html" />
+    <Content Include="Public\modules\usuario\label\label.js" />
+    <Content Include="Public\modules\usuario\modal\modal.css" />
+    <Content Include="Public\modules\usuario\modal\modal.html" />
+    <Content Include="Public\modules\usuario\modal\modal.js" />
+    <Content Include="Public\modules\usuario\model.js" />
+    <Content Include="Public\modules\usuario\page\auth.css" />
+    <Content Include="Public\modules\usuario\page\auth.html" />
+    <Content Include="Public\modules\usuario\page\auth.js" />
+    <Content Include="Public\modules\usuario\page\page.css" />
+    <Content Include="Public\modules\usuario\page\page.html" />
+    <Content Include="Public\modules\usuario\page\page.js" />
+    <Content Include="Public\modules\usuario\popup\popup.css" />
+    <Content Include="Public\modules\usuario\popup\popup.html" />
+    <Content Include="Public\modules\usuario\popup\popup.js" />
+    <Content Include="Public\modules\usuario\popup\silhouette96.png" />
+    <Content Include="Public\modules\usuario\search\page.css" />
+    <Content Include="Public\modules\usuario\search\page.html" />
+    <Content Include="Public\modules\usuario\search\page.js" />
+    <Content Include="Public\modules\usuario\search\textbox.js" />
+    <Content Include="Public\modules\usuario\service.js" />
+    <Content Include="Public\modules\usuario\table\row.css" />
+    <Content Include="Public\modules\usuario\table\row.html" />
+    <Content Include="Public\modules\usuario\table\row.js" />
+    <Content Include="Public\modules\usuario\table\table.css" />
+    <Content Include="Public\modules\usuario\table\table.html" />
+    <Content Include="Public\modules\usuario\table\table.js" />
+    <Content Include="Public\modules\usuario\tipo\select.js" />
+    <Content Include="Public\modules\util\lineselect\check.png" />
+    <Content Include="Public\modules\util\lineselect\lineselect.css" />
+    <Content Include="Public\modules\util\lineselect\lineselect.html" />
+    <Content Include="Public\modules\util\lineselect\lineselect.js" />
+    <Content Include="Public\modules\util\meses\select.js" />
+    <Content Include="Public\modules\util\relatorio\page\page.css" />
+    <Content Include="Public\modules\util\relatorio\page\page.html" />
+    <Content Include="Public\modules\util\relatorio\page\page.js" />
+    <Content Include="Public\modules\util\relatorio\page\seta.png" />
+    <Content Include="Public\modules\util\relatorio\popup.ano\popup.css" />
+    <Content Include="Public\modules\util\relatorio\popup.ano\popup.html" />
+    <Content Include="Public\modules\util\relatorio\popup.ano\popup.js" />
+    <Content Include="Public\modules\util\relatorio\popup.mes\popup.css" />
+    <Content Include="Public\modules\util\relatorio\popup.mes\popup.html" />
+    <Content Include="Public\modules\util\relatorio\popup.mes\popup.js" />
+    <Content Include="Public\modules\util\search\textbox.js" />
+    <Content Include="Public\ui.config.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Mvc\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mvc\Views\Auth\Index.cshtml" />
+    <Content Include="Mvc\Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\config.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\ZapWeb.pubxml" />
+    <Content Include="Public\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Public\bootstrap\fonts\fontawesome-webfont.eot" />
+    <Content Include="Public\bootstrap\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Public\bootstrap\fonts\fontawesome-webfont.woff" />
+    <Content Include="Public\bootstrap\fonts\FontAwesome.otf" />
+    <Content Include="Public\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Public\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Public\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Public\bootstrap\fonts\Simple-Line-Icons.eot" />
+    <Content Include="Public\bootstrap\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="Public\bootstrap\fonts\Simple-Line-Icons.woff" />
+    <Content Include="Public\bootstrap\fonts\sourcesanspro\sourcesanspro-bold.woff" />
+    <Content Include="Public\bootstrap\fonts\sourcesanspro\sourcesanspro-light.woff" />
+    <Content Include="Public\bootstrap\fonts\sourcesanspro\sourcesanspro.woff" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>16378</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12160/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

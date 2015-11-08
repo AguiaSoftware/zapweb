@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>ZapWeb</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <link type="text/css" rel="stylesheet" href="http://zap.view/bootstrap/css/bootstrap.css" media="all">
+        <link type="text/css" rel="stylesheet" href="http://zap.view/bootstrap/css/bootstrap-responsive.css" media="all">
+
+        <link type="text/css" rel="stylesheet" href="http://zap.view/bootstrap/css/font.css" />
+        <link type="text/css" rel="stylesheet" href="http://zap.view/bootstrap/css/font-awesome.min.css" />
+        <link type="text/css" rel="stylesheet" href="http://zap.view/bootstrap/css/simple-line-icons.css" />
+
+        <script type="text/javascript" src="http://zap.view/lib/jquery/jquery.js"></script>
+        <script type="text/javascript" src="http://localhost/Pillar/Pillar/core/pillar.develop.js" app="/Public/app.js" config="/Public/app.config.js"></script>
+
+        <script type="text/javascript">
+            var CurrentUsuario = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(this.ViewData["usuario"]));
+        </script>
+
+    </head>
+
+    <body>
+
+        <div at="navigation"></div>
+
+        <div at="body"></div>
+
+        <div id="progress"></div>
+
+    </body>
+
+</html>
