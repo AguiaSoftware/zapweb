@@ -1,12 +1,12 @@
 yum.define([
-	// PI.Url.create('Condominio', '/historico/rowadd.html'),
+	PI.Url.create('Condominio', '/historico/rowadd.html'),
 	// PI.Url.create('Condominio', '/historico/rowadd.css')
 ], function(html){
 
 	Class('Condominio.Historico.TableRowNew').Extend(Mvc.Component).Body({
 
 		instances: function(){
-			this.view = new Mvc.View('<tr> <td at="data" style="text-align: left;"></td> <td at="descricao"></td> <td at="proximo" style="text-align: left;"></td> <td at="rank" style="text-align: left"></td> </tr>');
+			this.view = new Mvc.View(html);
 
 			this.data = new UI.DateBox({
 				dataModel: 'Data',
@@ -18,9 +18,16 @@ yum.define([
 				placeholder: 'Data'
 			});
 			
+			this.hora = new UI.TextBox({
+				placeholder: '00:00',
+				mask: 'hora'
+			});
+			
 			this.descricao = new UI.TextBox({
 				dataModel: 'Descricao',
-				placeholder: 'Descrição'
+				placeholder: 'Descrição',
+				autosize: true,
+				height: '37px'
 			});
 			
 			this.rank = new UI.Rating({

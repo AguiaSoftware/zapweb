@@ -33,7 +33,11 @@ yum.define([
 				score: rank,
 				readOnly: this.readOnly
 			});
-		}		
+		},
+		
+		reload: function(){
+			this.view.element.raty('reload');
+		}
 
 	});
 

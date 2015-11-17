@@ -17,6 +17,7 @@ yum.define([
 				'Data': new Mvc.Model.Validator.Required('Informe a data do contato'),
 				'Descricao': new Mvc.Model.Validator.Required('Informe a descrição do contato'),
 				'ProximoContato': new Mvc.Model.Validator.Required('Informe a data do próximo contato'),
+				'Hora': new Mvc.Model.Validator.Required('Informe o horário do próximo contato'),
 				'Rank': new Mvc.Model.Validator.Required('Informe a classificação do condomínio')
 			};
 		},
@@ -25,7 +26,9 @@ yum.define([
 			var model = new Historico.Model(json);
 
 			model.Data = Lib.DataTime.create(json.Data, 'yyyy-MM-ddThh:mm:ss').getDateStringFromFormat('dd/MM/yyyy');
-			model.ProximoContato = Lib.DataTime.create(json.ProximoContato, 'yyyy-MM-ddThh:mm:ss').getDateStringFromFormat('dd/MM/yyyy');
+			
+			model.ProximoContatoDataTime = Lib.DataTime.create(json.ProximoContato, 'yyyy-MM-ddThh:mm:ss'); 
+			model.ProximoContato = model.ProximoContatoDataTime.getDateStringFromFormat('dd/MM/yyyy');
 
 			return model;
 		},

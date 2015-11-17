@@ -1,6 +1,5 @@
 yum.define([
 	PI.Url.create('Condominio', '/historico/painel.html'),
-	// PI.Url.create('Condominio', '/historico/painel.css'),
 	PI.Url.create('Condominio', '/historico/popup.js')
 ], function(html){
 
@@ -19,23 +18,29 @@ yum.define([
 				dataModel: 'model'
 			});
 			
-			// this.popup = new Condominio.Historico.Popup();
+			this.popup = new Condominio.Historico.Popup();
 			this.model = new Condominio.Historico.Model();
 		},
 		
 		viewDidLoad: function(){
 			
-			// this.popup.showOnClick( this.add );
+			this.popup.showOnClick( this.add );
 			
 			this.base.viewDidLoad();
 		},
 		
-		load: function( condominio ){
-			var self = this;
-			
+		load: function( condominio ){			
 			this.model.Condominio = condominio;
 			
-			this.model.all( condominio.Id ).ok(function(historicos){
+			this.popup.model = this.model;
+			
+			this.refresh();
+		},
+		
+		refresh: function(){
+			var self = this;
+			
+			this.model.all( this.model.Condominio.Id ).ok(function(historicos){
 				self.popule(historicos);
 			});
 		},
@@ -62,18 +67,22 @@ yum.define([
 		events: {
 		
 			'{add} click': function(){
-				var self = this;
-				var model = new Condominio.Historico.Model({
-					Condominio: this.model.Condominio
-				});
+				// var self = this;
+				// var model = new Condominio.Historico.Model({
+				// 	Condominio: this.model.Condominio
+				// });
 
-				this.saveModel( model, this.add ).ok(function(historico){
-					self.addRow(historico);
-					self.newrow.clear();
+				// this.saveModel( model, this.add ).ok(function(historico){
+				// 	self.addRow(historico);
+				// 	self.newrow.clear();
 					
-					self.event.trigger('added', historico);
-				});
+				// 	self.event.trigger('added', historico);
+				// });
 			},
+			
+			'{popup} added': function(){
+				this.refresh();
+			}
 			
 		}
 		

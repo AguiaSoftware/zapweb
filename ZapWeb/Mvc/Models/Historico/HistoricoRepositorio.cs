@@ -29,7 +29,8 @@ namespace ZapWeb.Models
         {
             var sql = PetaPoco.Sql.Builder.Append("SELECT *")
                                           .Append("FROM Historico")
-                                          .Append("WHERE Historico.CondominioId = @0", condominioId);
+                                          .Append("WHERE Historico.CondominioId = @0", condominioId)
+                                          .Append("ORDER BY Historico.ProximoContato DESC");
 
             return this.Db.Fetch<Historico>(sql);
         }

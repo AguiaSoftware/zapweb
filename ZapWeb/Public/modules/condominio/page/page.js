@@ -114,19 +114,21 @@
         viewDidLoad: function () {
             var self = this;
             
-            this.tabbar.add('geral', 'Dados Gerais', true);
-            this.tabbar.add('contatos', 'Contatos');
+            this.tabbar.add('geral', 'Dados Gerais');
+            this.tabbar.add('contatos', 'Contatos', true);
             this.tabbar.add('campanhas', 'Campanhas');
             
-            app.home.setTitle('Adicionar Condomínio');
             
             if(this.model.isNew()){               
+                app.home.setTitle('Adicionar Condomínio');
+                
                 this.unidade.set(Unidade.Current);
                 
                 this.tabbar.hideTab('contatos');
                 this.tabbar.hideTab('campanhas');
                 
             }else{
+                app.home.setTitle('Editar Condomínio');
                 
                 this.contatos.load( this.model );
                 this.campanhas.load( this.model );

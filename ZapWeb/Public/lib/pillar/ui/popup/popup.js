@@ -16,6 +16,8 @@
             this.ref = null;
 
             this.arrowHeight = 12;
+            
+            this.autoclose = true;
 
             this.position = 'top::left';
 
@@ -179,6 +181,8 @@
 	            var id = this.ref.attr('id');
                 var clss = this.ref.attr('class');
 				var el = this.view.element.attr('id');
+
+                if(!this.autoclose) return;
 
                 if ($(ee.target).parents('#' + el).length > 0 || $(ee.target).attr('id') == el) return;
 
