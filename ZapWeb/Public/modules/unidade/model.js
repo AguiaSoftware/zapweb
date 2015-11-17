@@ -41,6 +41,8 @@
         },
 
         initWithJson: function (json) {
+            if(json == null) return new Unidade.Model();
+            
             var model = new Unidade.Model(json);
 
             model.Cidade = new Cidade.Model(json.Cidade);

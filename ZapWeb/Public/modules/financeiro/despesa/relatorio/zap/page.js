@@ -14,6 +14,8 @@ yum.define([
 			this.view.inject({
 				body: html
 			});
+			
+			this.title = 'Relatório Despesa Zap';
 		},
 
 		viewDidLoad: function(){
@@ -24,6 +26,9 @@ yum.define([
 		    this.base.viewDidLoad();
 
 		    this.view.nomeUnidade.html(Unidade.Current.Nome);
+			
+			this.breadcumb.setTitle('Relatório Despesa ' + Unidade.Current.Nome);
+			
 		    this.unidade.hide();
 
 			this.loadAndFill();

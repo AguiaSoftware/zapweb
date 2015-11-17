@@ -27,6 +27,10 @@
             
             return this;
         },
+        
+        hideTab: function(id){
+            this.view.element.find('[tabbar-id="' + id + '"]').hide();
+        },
 
         hideContainers: function () {
             for (var i = 0; i < this.tabs.length; i++) {

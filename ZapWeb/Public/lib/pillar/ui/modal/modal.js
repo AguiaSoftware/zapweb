@@ -58,10 +58,6 @@
             '{window} click': function (e, ee) {
                 if (this.opened && $(ee.target).parents('.ui-modal-container').length == 0) {
                     e = this.view.element;
-                    e.addClass('anime-pulse');
-                    setTimeout(function () {
-                        e.removeClass('anime-pulse');
-                    }, 500);
                 }
             }
 

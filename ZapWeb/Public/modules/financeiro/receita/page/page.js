@@ -7,7 +7,7 @@
 	PI.Url.create('Util', '/meses/select.js')
 ], function (html) {
 
-    Class('Financeiro.Receita.Page').Extend(Mvc.Component).Body({
+    Class('Financeiro.Receita.Page').Extend(PI.Page).Body({
 
         instances: function () {
             this.view = new Mvc.View(html);
@@ -57,6 +57,8 @@
                     'min-width': '120px'
                 }
             });
+            
+            this.title = 'Receita';
         },
 
         viewDidLoad: function () {

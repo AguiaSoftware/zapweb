@@ -6,7 +6,7 @@
     PI.Url.create('Fornecedor', '/search/model.js')
 ], function (html) {
 
-    Class('Fornecedor.Search.Page').Extend(Mvc.Component).Body({
+    Class('Fornecedor.Search.Page').Extend(PI.Page).Body({
 
         instances: function () {
             this.view = new Mvc.View(html);
@@ -69,6 +69,8 @@
                     'min-width': '120px'
                 }
             });
+            
+            this.title = 'Pesquisar Fornecedor';
         },
 
         viewDidLoad: function () {

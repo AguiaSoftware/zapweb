@@ -11,6 +11,8 @@ yum.define([
 			this.view.inject({
 				body: html
 			});
+			
+			this.title = 'Relatório Receita Zap';
 		},
 
 		viewDidLoad: function(){
@@ -65,7 +67,7 @@ yum.define([
 		events: {
 
 			'{this} select::unidade': function(unidade){
-				PI.Url.Hash.to('Relatorio/Receita/' + unidade.Id);
+				PI.Url.Hash.to('!Relatorio/Receita/' + unidade.Id);
 			},
 			
 			'{this} change::mes': function(mes){

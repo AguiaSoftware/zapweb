@@ -48,11 +48,15 @@
         events: {
 
             '@img click': function () {
-                var preview = new Arquivo.Preview({
-                    arquivo: this.arquivo
-                });
-
-                preview.render(this.view.modal);
+                if(this.arquivo.Tipo.indexOf('word') > 0){
+                    PI.Url.to('BaseUrl', '/Arquivo/Download?hash=' + this.arquivo.Hash);
+                }else{
+                    var preview = new Arquivo.Preview({
+                        arquivo: this.arquivo
+                    });
+    
+                    preview.render(this.view.modal);   
+                }
             },
 
             '{abrir} click': function () {

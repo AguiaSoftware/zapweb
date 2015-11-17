@@ -25,7 +25,9 @@
         },
 
         getImageUrl: function(){
-            if (this.Tipo == 'application/pdf') {
+            if(this.Tipo.indexOf('word') > 0){
+                return PI.Url.create('Arquivo', '/word.png');
+            }else if (this.Tipo == 'application/pdf') {
                 return PI.Url.create('Arquivo', '/pdf.png').getUrl();
             }else{
                 return PI.Url.create('BaseUrl', '/Arquivo/Thumb?hash=' + this.Hash).getUrl();

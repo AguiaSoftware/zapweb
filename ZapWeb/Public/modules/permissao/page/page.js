@@ -6,7 +6,7 @@
     PI.Url.create('Permissao', '/painel/painel.js')
 ], function (html) {
 
-    Class('Permissao.Page').Extend(Mvc.Component).Body({
+    Class('Permissao.Page').Extend(PI.Page).Body({
 
         instances: function () {
             this.view = new Mvc.View(html);
@@ -36,6 +36,8 @@
                     'min-width': '120px'
                 }
             });
+            
+            this.title = 'Permissões';
         },
 
         viewDidLoad: function () {

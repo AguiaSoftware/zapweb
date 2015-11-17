@@ -118,3 +118,4 @@ G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\obj\Debug\ZapWeb
 G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\obj\Debug\ZapWeb.pdb
 G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Pillar.dll
 G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\ZapWeb.dll.config
+G:\Cloud\Google Drive\Empresas\Aguia\Clientes\Zap\ZapWeb\ZapWeb\bin\Ionic.Zip.dll

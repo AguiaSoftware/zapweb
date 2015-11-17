@@ -38,6 +38,9 @@
     PI.Url.add('UI.StatusStrip', 'UI', '/statusstrip');
     PI.Url.add('UI.Paging', 'UI', '/paging');
     PI.Url.add('UI.LoadMore', 'UI', '/loadmore');
+    PI.Url.add('UI.RichText', 'UI', '/richtext');
+    PI.Url.add('UI.Anime', 'UI', '/anime');
+    PI.Url.add('UI.Calendar', 'UI', '/calendar');
 
     /**
      * Repositorio
@@ -75,5 +78,8 @@
     PI.Repositorio.add('UI.StatusStrip', '/statusstrip.js');
     PI.Repositorio.add('UI.Paging', '/paging.js');
     PI.Repositorio.add('UI.LoadMore', '/loadmore.js');
+    PI.Repositorio.add('UI.RichText', '/richtext.js');
+    PI.Repositorio.add('UI.Anime', '/anime.js');
+    PI.Repositorio.add('UI', '/calendar/calendar.js');
 
 });

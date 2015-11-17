@@ -11,7 +11,7 @@
     PI.Url.create('Arquivo', '/painel.js')
 ], function (html) {
 
-    Class('Unidade.Page').Extend(Mvc.Component).Body({
+    Class('Unidade.Page').Extend(PI.Page).Body({
 
         instances: function () {
             this.view = new Mvc.View(html);
@@ -68,6 +68,8 @@
                     'min-width': '120px'
                 }
             });
+            
+            this.title = 'Unidade';
         },
 
         viewDidLoad: function () {
@@ -80,6 +82,8 @@
 
                 this.model.get().ok(function (unidade) {
                     app.home.setTitle(title + ' - ' + unidade.Nome);
+
+                    self.breadcumb.setTitle( unidade.Nome );
 
                     self.injectModelToView(unidade);
                 });

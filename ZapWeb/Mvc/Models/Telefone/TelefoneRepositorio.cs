@@ -9,7 +9,7 @@ namespace ZapWeb.Models
 {
     public class TelefoneRepositorio : Repositorio
     {
-        public void Add(List<Telefone> telefones)
+        public void Insert(List<Telefone> telefones)
         {
             if (telefones == null) return;
 

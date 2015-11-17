@@ -14,7 +14,7 @@ namespace ZapWeb.Models
 
             if (fornecedor.Endereco != null) {
                 var enderecoRepositorio = new EnderecoRepositorio();
-                enderecoRepositorio.Add(fornecedor.Endereco);
+                enderecoRepositorio.Insert(fornecedor.Endereco);
 
                 this.Db.Insert("FornecedorEndereco", "Id", new
                 {
@@ -25,7 +25,7 @@ namespace ZapWeb.Models
 
             if (fornecedor.Contato != null) {
                 var contatoRepositorio = new ContatoRepositorio();
-                contatoRepositorio.Add(fornecedor.Contato);
+                contatoRepositorio.Insert(fornecedor.Contato);
 
                 this.Db.Insert("FornecedorContato", "Id", new
                 {

@@ -16,6 +16,8 @@ yum.define([
 			});
 
 			this.tipoUnidade = Unidade.Tipo.CENTRAL;
+			
+			this.title = 'Relatório Despesa Central';
 		},
 
 		viewDidLoad: function(){
@@ -38,6 +40,9 @@ yum.define([
 
 				//seta o nome da unidade selecionada
 		    	self.view.nomeUnidade.html(relatorio.Unidade.Nome);
+				
+				self.breadcumb.setTitle('Relatório Despesa ' + relatorio.Unidade.Nome);
+				
 		    	self.unidade.set(relatorio.Unidade.Nome);
 
 		    	self.fill(relatorio);
@@ -140,13 +145,13 @@ yum.define([
 		events: {
 			
 			'{this} select::unidade': function(unidade){
-				PI.Url.Hash.to('Relatorio/Despesa/Central/' + unidade.Id);
+				PI.Url.Hash.to('!Relatorio/Despesa/Central/' + unidade.Id);
 			},
 
 			'{this} change::mes': function(mes){
 			    this.clear();
 
-			    this.view.linkReceita.attr('href', '#Relatorio/Receita/Zap/' + this.getMes() + '/' + this.getAno());
+			    this.view.linkReceita.attr('href', '#!Relatorio/Receita/Zap/' + this.getMes() + '/' + this.getAno());
 
 				this.loadAndFill();  
 			},
@@ -154,7 +159,7 @@ yum.define([
 			'{this} change::ano': function(ano){
 			    this.clear();
 
-			    this.view.linkReceita.attr('href', '#Relatorio/Receita/Zap/' + this.getMes() + '/' + this.getAno());
+			    this.view.linkReceita.attr('href', '#!Relatorio/Receita/Zap/' + this.getMes() + '/' + this.getAno());
 
 				this.loadAndFill();			    
 			},

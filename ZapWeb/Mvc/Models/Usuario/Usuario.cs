@@ -12,6 +12,7 @@ namespace ZapWeb.Models
         public string Email { get; set; }
         public DateTime Created { get; set; }
         public int UnidadeId { get; set; }
+        public string Tratamento { get; set; }
 
         [PetaPoco.Ignore] public Unidade Unidade { get; set; }
         [PetaPoco.Ignore] public Account Account { get; set; }

@@ -516,19 +516,11 @@
 	"buffers":
 	[
 		{
-			"file": "ZapWeb/Public/modules/financeiro/service.js",
+			"file": "ZapWeb/Public/modules/agenda/page/page.js",
 			"settings":
 			{
-				"buffer_size": 6156,
+				"buffer_size": 1222,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "ZapWeb/Public/app.config.js",
-			"settings":
-			{
-				"buffer_size": 2281,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -572,6 +564,8 @@
 	},
 	"file_history":
 	[
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/financeiro/service.js",
+		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/app.config.js",
 		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/financeiro/receita/model.js",
 		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/financeiro/receita/page/page.html",
 		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/financeiro/receita/page/page.js",
@@ -591,7 +585,6 @@
 		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/arquivo/painel.js",
 		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/arquivo/thumb.html",
 		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/modules/arquivo/thumb.js",
-		"/G/Cloud/Google Drive/Empresas/Aguia/Clientes/Zap/ZapWeb/ZapWeb/Public/app.config.js",
 		"/C/Users/Manoel/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/C/Users/Manoel/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Manoel/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
@@ -698,8 +691,7 @@
 		"/G/Cloud/Dropbox/php/nas/public/ui/nas.js",
 		"/G/Cloud/Dropbox/php/nas/public/ui/uploader.js",
 		"/G/Cloud/Dropbox/php/nas/public/nas/nas.js",
-		"/G/Cloud/Dropbox/php/nas/module/Nas/Controller/FileController.php",
-		"/G/Cloud/Dropbox/php/nas/module/Siempre/Module.php"
+		"/G/Cloud/Dropbox/php/nas/module/Nas/Controller/FileController.php"
 	],
 	"find":
 	{
@@ -872,56 +864,27 @@
 			[
 				{
 					"buffer": 0,
-					"file": "ZapWeb/Public/modules/financeiro/service.js",
+					"file": "ZapWeb/Public/modules/agenda/page/page.js",
 					"settings":
 					{
-						"buffer_size": 6156,
+						"buffer_size": 1222,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								765,
-								765
+								381,
+								381
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "ZapWeb/Public/app.config.js",
-					"settings":
-					{
-						"buffer_size": 2281,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1056.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

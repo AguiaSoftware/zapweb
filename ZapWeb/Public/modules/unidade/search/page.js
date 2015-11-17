@@ -5,7 +5,7 @@
     PI.Url.create('Lib.TableFilter', '/tablefilter.js')
 ], function (html) {
 
-    Class('Unidade.Search.Page').Extend(Mvc.Component).Body({
+    Class('Unidade.Search.Page').Extend(PI.Page).Body({
 
         instances: function () {
             this.view = new Mvc.View(html);
@@ -18,6 +18,8 @@
                 messageEmpty: 'Aguarde ...',
                 columns: ['editar']
             });
+            
+            this.title = 'Pesquisar Unidade';
         },
 
         viewDidLoad: function () {

@@ -5,7 +5,7 @@
     PI.Url.create('Notificacao', '/model.js')
 ], function (html) {
 
-    Class('Notificacao.Page').Extend(Mvc.Component).Body({
+    Class('Notificacao.Page').Extend(PI.Page).Body({
 
         instances: function () {
             this.view = new Mvc.View(html);
@@ -18,6 +18,8 @@
             });
 
             this.items = [];
+            
+            this.title = 'Notificações';
         },
 
         viewDidLoad: function () {

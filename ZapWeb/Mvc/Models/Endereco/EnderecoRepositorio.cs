@@ -9,7 +9,7 @@ namespace ZapWeb.Models
 {
     public class EnderecoRepositorio : Repositorio
     {
-        public void Add(Endereco endereco)
+        public void Insert(Endereco endereco)
         {
             if (endereco.Cidade != null) {
                 endereco.CidadeId = endereco.Cidade.Id;

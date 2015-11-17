@@ -26,6 +26,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,6 +46,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\..\..\..\..\..\Temp\zip-v1.9\Release\Ionic.Zip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Core">
       <HintPath>..\..\..\..\..\..\..\Documents\Visual Studio 2012\Projects\RealTime\bin\Release\Microsoft.AspNet.SignalR.Core.dll</HintPath>
     </Reference>
@@ -55,6 +60,9 @@
       <HintPath>..\..\..\..\..\..\..\Documents\Visual Studio 2012\Projects\RealTime\bin\Release\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.Owin.Host.SystemWeb">
       <HintPath>..\..\..\..\..\..\..\Documents\Visual Studio 2012\Projects\RealTime\bin\Release\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
     </Reference>
@@ -150,10 +158,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Lib\DataBaseParam.cs" />
+    <Compile Include="Mvc\Controllers\AdministradoraController.cs" />
+    <Compile Include="Mvc\Controllers\AgendaController.cs" />
     <Compile Include="Mvc\Controllers\AuthController.cs" />
     <Compile Include="Mvc\Controllers\CidadeController.cs" />
     <Compile Include="Mvc\Controllers\CentroCustoController.cs" />
     <Compile Include="Mvc\Controllers\ArquivoController.cs" />
+    <Compile Include="Mvc\Controllers\CondominioController.cs" />
+    <Compile Include="Mvc\Controllers\HistoricoController.cs" />
+    <Compile Include="Mvc\Controllers\MaterialController.cs" />
     <Compile Include="Mvc\Controllers\RealTimeController.cs" />
     <Compile Include="Mvc\Controllers\ReceitaRelatorioController.cs" />
     <Compile Include="Mvc\Controllers\DespesaRelatorioController.cs" />
@@ -161,6 +174,7 @@
     <Compile Include="Mvc\Controllers\NotificacaoController.cs" />
     <Compile Include="Mvc\Controllers\DespesaController.cs" />
     <Compile Include="Mvc\Controllers\FornecedorController.cs" />
+    <Compile Include="Mvc\Controllers\SindicoController.cs" />
     <Compile Include="Mvc\Controllers\UnidadeController.cs" />
     <Compile Include="Mvc\Controllers\UsuarioController.cs" />
     <Compile Include="Mvc\Controllers\GrupoPermissaoController.cs" />
@@ -172,11 +186,21 @@
     <Compile Include="Lib\Mvc\BusinessLogic.cs" />
     <Compile Include="Lib\Mvc\Controller.cs" />
     <Compile Include="Lib\Mvc\Repositorio.cs" />
+    <Compile Include="Mvc\Models\Administradora\Administradora.cs" />
+    <Compile Include="Mvc\Models\Administradora\AdministradoraRepositorio.cs" />
+    <Compile Include="Mvc\Models\Administradora\AdministradoraRules.cs" />
+    <Compile Include="Mvc\Models\Agenda\Agenda.cs" />
+    <Compile Include="Mvc\Models\Agenda\AgendaRepositorio.cs" />
+    <Compile Include="Mvc\Models\Agenda\AgendaRules.cs" />
     <Compile Include="Mvc\Models\Arquivo\Arquivo.cs" />
     <Compile Include="Mvc\Models\Arquivo\ArquivoRules.cs" />
     <Compile Include="Mvc\Models\Arquivo\ArquivoRepositorio.cs" />
     <Compile Include="Mvc\Models\Cidade\Cidade.cs" />
     <Compile Include="Mvc\Models\Cidade\CidadeRepositorio.cs" />
+    <Compile Include="Mvc\Models\Condominio\Condominio.cs" />
+    <Compile Include="Mvc\Models\Condominio\CondominioRepositorio.cs" />
+    <Compile Include="Mvc\Models\Condominio\CondominioRules.cs" />
+    <Compile Include="Mvc\Models\Condominio\CondominioSearch.cs" />
     <Compile Include="Mvc\Models\Contato\Contato.cs" />
     <Compile Include="Mvc\Models\Contato\ContatoRepositorio.cs" />
     <Compile Include="Mvc\Models\Financeiro\CentroCusto\CentroCusto.cs" />
@@ -202,6 +226,12 @@
     <Compile Include="Mvc\Models\Financeiro\Receita\Relatorio\ReceitaRelatorioRepositorio.cs" />
     <Compile Include="Mvc\Models\Financeiro\Receita\Relatorio\ReceitaRelatorioRules.cs" />
     <Compile Include="Mvc\Models\Fornecedor\FornecedorPesquisa.cs" />
+    <Compile Include="Mvc\Models\Historico\Historico.cs" />
+    <Compile Include="Mvc\Models\Historico\HistoricoRepositorio.cs" />
+    <Compile Include="Mvc\Models\Historico\HistoricoRules.cs" />
+    <Compile Include="Mvc\Models\Material\Material.cs" />
+    <Compile Include="Mvc\Models\Material\MaterialRepositorio.cs" />
+    <Compile Include="Mvc\Models\Material\MaterialRules.cs" />
     <Compile Include="Mvc\Models\Notificacao\NotificacaoUsuarioRepositorio.cs" />
     <Compile Include="Mvc\Models\Notificacao\NotificacaoRepositorio.cs" />
     <Compile Include="Mvc\Models\Notificacao\Notificacao.cs" />
@@ -209,6 +239,9 @@
     <Compile Include="Mvc\Models\Notificacao\NotificacaoUsuario.cs" />
     <Compile Include="Mvc\Models\RealTime\RealTime.cs" />
     <Compile Include="Mvc\Models\RealTime\RealTimeRepositorio.cs" />
+    <Compile Include="Mvc\Models\Sindico\Sindico.cs" />
+    <Compile Include="Mvc\Models\Sindico\SindicoRepositorio.cs" />
+    <Compile Include="Mvc\Models\Sindico\SindicoRules.cs" />
     <Compile Include="Mvc\Models\TableDependency\TableDependency.cs" />
     <Compile Include="Mvc\Models\Telefone\TelefoneRepositorio.cs" />
     <Compile Include="Mvc\Models\Telefone\Telefone.cs" />
@@ -270,6 +303,7 @@
     <Content Include="Public\lib\datatime\week.js" />
     <Content Include="Public\lib\drag\drag.js" />
     <Content Include="Public\lib\jquery\jquery.js" />
+    <Content Include="Public\lib\moment\moment.js" />
     <Content Include="Public\lib\pillar\ui\alert\alert.css" />
     <Content Include="Public\lib\pillar\ui\alert\alert.html" />
     <Content Include="Public\lib\pillar\ui\alert\alert.js" />

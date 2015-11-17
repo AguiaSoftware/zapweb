@@ -53,5 +53,18 @@ namespace ZapWeb.Models
 
             return false;
         }
+
+        public bool IsInTreeView()
+        {
+            var unidadeRepositorio = new UnidadeRepositorio();
+            var unidade = unidadeRepositorio.Fetch(Account.Current.Usuario.Unidade.Id);
+
+            if (unidade.Tipo == UnidadeTipo.ZAP) return true;
+            if (unidade.Id == Id) return true;
+            if (this.IsChildren(Account.Current.Usuario.Unidade.Id)) return true;
+
+            return false;
+
+        }
     }
 }

@@ -6,7 +6,7 @@
     PI.Url.create('Unidade', '/modal/modal.js')
 ], function (html) {
 
-    Class('Util.Relatorio.Page').Extend(Mvc.Component).Body({
+    Class('Util.Relatorio.Page').Extend(PI.Page).Body({
 
         instances: function () {
             this.view = new Mvc.View(html);
@@ -35,9 +35,13 @@
                 label: 'Unidade',
                 position: 'right'
             });
+            
+            this.voltar = new UI.Button();
 
             this.popupMes = new Util.Relatorio.PopupMes();
             this.popupAno = new Util.Relatorio.PopupAno();
+            
+            this.title = 'Relatório';
         },
 
         viewDidLoad: function () {
@@ -72,7 +76,7 @@
             }
 
             if (this.unidadeId == 0) setTimeout(function(){
-                self.showPopupSelectUnidade()
+                self.showPopupSelectUnidade();
             }, 500);
 
             this.base.viewDidLoad();

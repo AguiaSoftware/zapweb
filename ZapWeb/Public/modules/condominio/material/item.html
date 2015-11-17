@@ -1,0 +1,28 @@
+<div class="condominio-material-painel-item">
+	
+	<table>
+		<tr>
+			<td style="width: 45px;">
+				<b>Inicio</b>:
+			</td>
+			<td>
+				@{this.material.DataInicio} - @{this.material.HoraInicio}h		
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<b>Fim</b>:
+			</td>
+			<td>
+				@{this.material.DataFim} - @{this.material.HoraFim}h		
+			</td>
+		</tr>
+	</table>
+	
+	<div class="condominio-search-result-cmd">
+		<a href="#Condominio/Editar/Material/@{this.material.Id}">Editar</a>
+		<span class="condominio-search-result-separador">· </span>
+		<div at="materialAnexos"></div>
+	</div>
+	
+</div>

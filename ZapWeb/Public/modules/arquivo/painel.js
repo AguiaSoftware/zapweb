@@ -22,18 +22,25 @@
                 classes: 'vermelho',
             });
 
+            this.extensions = ['jpg', 'jpeg', 'bmp', 'gif', 'png', 'pdf'];
+
+            this.arquivos = [];
+        },
+
+        init: function(){
+            this.base.init();
+
             this.upload = new UI.Upload({
                 label: 'Enviar Arquivo',
                 baseUrl: PI.Url.create('BaseUrl', '/arquivo').getUrl(),
                 classes: 'btn btn-sm button cinza',
                 config: {
-                    extensions: ['jpg', 'jpeg', 'bmp', 'gif', 'png', 'pdf'],
+                    extensions: this.extensions,
                     unidade: 'Kilobytes',
                     maxSize: 5242880 // 5MB
                 }
             });
 
-            this.arquivos = [];
         },
 
         viewDidLoad: function () {

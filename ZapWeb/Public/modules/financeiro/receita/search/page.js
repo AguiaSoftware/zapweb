@@ -4,12 +4,14 @@ yum.define([
 	PI.Url.create('Financeiro', '/receita/search/row.js')
 ], function(html){
 
-	Class('Financeiro.Receita.Search.Page').Extend(Mvc.Component).Body({
+	Class('Financeiro.Receita.Search.Page').Extend(PI.Page).Body({
 
 		instances: function(){
 			this.view = new Mvc.View(html);
 
 			this.model = new Financeiro.Receita.Model();
+			
+			this.title = 'Pesquisar Receita';
 		},
 
 		viewDidLoad: function(){

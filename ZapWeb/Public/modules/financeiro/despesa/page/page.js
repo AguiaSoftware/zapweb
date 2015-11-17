@@ -10,7 +10,7 @@
     PI.Url.create('Financeiro', '/despesa/justificativa/modal.js')
 ], function (html) {
 
-    Class('Financeiro.Despesa.Page').Extend(Mvc.Component).Body({
+    Class('Financeiro.Despesa.Page').Extend(PI.Page).Body({
 
         instances: function () {
             this.view = new Mvc.View(html);
@@ -140,6 +140,8 @@
                     'min-width': '133px'
                 }
             });
+            
+            this.title = 'Despesa';
         },
 
         viewDidLoad: function () {

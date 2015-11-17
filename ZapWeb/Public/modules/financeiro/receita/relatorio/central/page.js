@@ -13,6 +13,8 @@ yum.define([
 			});
 
 			this.tipoUnidade = Unidade.Tipo.CENTRAL;
+			
+			this.title = 'Relatório Receita Central';
 		},
 
 		viewDidLoad: function(){
@@ -60,6 +62,7 @@ yum.define([
 	    	this.view.tbody.html(view);
 	    	this.view.totalReceitas.html( PI.Convert.DolarToReal( totalReceita ) );
 			this.view.nomeUnidade.html(central.Nome);
+			this.breadcumb.setTitle('Relatório Receita ' + central.Nome);
 		},
 
 		clear: function(){
@@ -70,7 +73,7 @@ yum.define([
 		events: {
 
 			'{this} select::unidade': function(unidade){
-				PI.Url.Hash.to('Relatorio/Receita/Central/' + unidade.Id);
+				PI.Url.Hash.to('!Relatorio/Receita/Central/' + unidade.Id);
 			},
 			
 			'{this} change::mes': function(mes){

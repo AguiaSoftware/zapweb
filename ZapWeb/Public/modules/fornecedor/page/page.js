@@ -5,7 +5,7 @@
     PI.Url.create('Contato', '/painel.js')
 ], function (html) {
 
-    Class('Fornecedor.Page').Extend(Mvc.Component).Body({
+    Class('Fornecedor.Page').Extend(PI.Page).Body({
 
         instances: function () {
             this.view = new Mvc.View(html);
@@ -59,7 +59,8 @@
                     'min-width': '120px'
                 }
             });
-
+            
+            this.title = 'Fornecedor';
         },
 
         viewDidLoad: function () {
@@ -72,6 +73,9 @@
 
                 this.model.get().ok(function (model) {
                     self.model = model;
+                    
+                    self.breadcumb.setTitle( model.Nome );
+                    
                     self.injectModelToView(model);
                 }).error(function (message) {
                     Alert.error('Não foi possível', message);

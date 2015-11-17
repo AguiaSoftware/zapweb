@@ -3,11 +3,14 @@
     float: left;
     cursor: pointer;
     margin-top: 16px;
+    max-width: 128px;
 }
 
 .anexo-thumb img{
     display: block;
     margin: auto;
+    max-width: 64px;
+    max-height: 64px;
 }
 
 .anexo-thumb-image {

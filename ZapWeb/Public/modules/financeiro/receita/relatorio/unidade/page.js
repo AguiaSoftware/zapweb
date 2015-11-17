@@ -13,6 +13,8 @@ yum.define([
 			});
 
 			this.tipoUnidade = Unidade.Tipo.COS;
+			
+			this.title = 'Relatório Receita Unidade';
 		},
 
 		viewDidLoad: function(){
@@ -36,6 +38,9 @@ yum.define([
 				if (dados.Unidade == null) return;
 
 				self.view.nomeUnidade.html(dados.Unidade.Nome);
+				
+				self.breadcumb.setTitle('Relatório Receita ' + dados.Unidade.Nome);
+				
 		    	self.unidade.set(dados.Unidade.Nome);
 
 		    	self.fill(dados.Receita);
@@ -69,7 +74,7 @@ yum.define([
 		events: {
 
 			'{this} select::unidade': function(unidade){
-				PI.Url.Hash.to('Relatorio/Receita/Unidade/' + unidade.Id);
+				PI.Url.Hash.to('!Relatorio/Receita/Unidade/' + unidade.Id);
 			},
 			
 			'{this} change::mes': function(mes){

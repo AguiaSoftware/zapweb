@@ -9,13 +9,13 @@ namespace ZapWeb.Models
 {
     public class ContatoRepositorio : Repositorio
     {
-        public void Add(Contato contato)
+        public void Insert(Contato contato)
         {
             this.Db.Insert(contato);
 
             if (contato.Telefones != null) {
                 var telefoneRepositorio = new TelefoneRepositorio();
-                telefoneRepositorio.Add(contato.Telefones);
+                telefoneRepositorio.Insert(contato.Telefones);
 
                 foreach (var telefone in contato.Telefones)
                 {
@@ -38,7 +38,7 @@ namespace ZapWeb.Models
                 this.RemoveTelefones(contato.Id);
 
                 var telefoneRepositorio = new TelefoneRepositorio();
-                telefoneRepositorio.Add(contato.Telefones);
+                telefoneRepositorio.Insert(contato.Telefones);
 
                 foreach (var telefone in contato.Telefones)
                 {

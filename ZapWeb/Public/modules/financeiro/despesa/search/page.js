@@ -7,7 +7,7 @@ yum.define([
 	PI.Url.create('Util', '/lineselect/lineselect.js')
 ], function(html){
 
-	Class('Financeiro.Despesa.Search.Page').Extend(Mvc.Component).Body({
+	Class('Financeiro.Despesa.Search.Page').Extend(PI.Page).Body({
 
 		instances: function(){
 			this.view = new Mvc.View(html);
@@ -102,6 +102,8 @@ yum.define([
 				totalVisible: 3,
 				model: this.model
 			});
+			
+			this.title = 'Pesquisar Despesa';
 		},
 
 		viewDidLoad: function(){

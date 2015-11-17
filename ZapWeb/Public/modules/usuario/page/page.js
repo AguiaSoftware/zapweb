@@ -6,7 +6,7 @@
     PI.Url.create('Arquivo', '/painel.js')
 ], function (html) {
 
-    Class('Usuario.Page').Extend(Mvc.Component).Body({
+    Class('Usuario.Page').Extend(PI.Page).Body({
 
         instances: function () {
             this.view = new Mvc.View(html);
@@ -46,6 +46,8 @@
                     'min-width': '120px'
                 }
             });
+            
+            this.title = 'Usuário';
         },
 
         viewDidLoad: function () {
@@ -60,6 +62,8 @@
                     self.model = usuario;
 
                     app.home.setTitle(title + ' - ' + usuario.Nome);
+
+                    self.breadcumb.setTitle( usuario.Nome );
 
                     self.injectModelToView(usuario);
                 });
