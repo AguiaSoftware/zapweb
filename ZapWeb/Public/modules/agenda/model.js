@@ -21,7 +21,9 @@ yum.define([
 		initWithJson: function (json) {
 			var model = new Agenda.Model(json);
 			
-			model.Data = Lib.DataTime.create(json.Data, 'yyyy-MM-ddThh:mm:ss').getDateStringFromFormat('yyyy-MM-dd hh:mm:ss');
+			model.DataTime = Lib.DataTime.create(json.Data, 'yyyy-MM-ddThh:mm:ss');
+			model.Data = model.DataTime.getDateStringFromFormat('yyyy-MM-dd hh:mm:ss');
+			model.DataFinal = model.DataTime.addMinutes(30).getDateStringFromFormat('yyyy-MM-dd hh:mm:ss');
 			
 			return model;
 		},

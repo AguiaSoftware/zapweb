@@ -42,7 +42,9 @@ yum.define([
 							id: items[i].Id,
 							title: items[i].Descricao,
 							description: items[i].Descricao,
-							start: items[i].Data
+							start: items[i].Data,
+							end: items[i].DataFinal,
+							url: items[i].Url
 						});
 					}
 					

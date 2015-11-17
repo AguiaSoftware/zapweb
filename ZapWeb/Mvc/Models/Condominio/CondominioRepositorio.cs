@@ -63,7 +63,12 @@ namespace ZapWeb.Models
             {
                 condominio.EnderecoId = condominio.Endereco.Id;
             }
-            
+
+            if (condominio.Unidade != null)
+            {
+                condominio.UnidadeId = condominio.Unidade.Id;
+            }
+
             this.Db.Update(condominio);
         }
 

@@ -49,7 +49,8 @@ yum.define([
 
 			this.fornecedor = new Fornecedor.Search.TextBox({
 				placeholder: 'Fornecedor',
-				dataModel: 'Fornecedor'
+				dataModel: 'Fornecedor',
+				clearOnSelect: false
 			});
 
 			this.unidade = new Unidade.Search.TextBox({
@@ -118,8 +119,8 @@ yum.define([
 			this.lineselect.add('Data', this.view.rowdata, true)
 						   .add('Número', this.view.rownumero)
 						   .add('Status', this.view.rowstatus, true)
-						   .add('Fornecedor', this.view.rowfornecedor)
 						   .add('Unidade', this.view.rowunidade, true)
+						   .add('Fornecedor', this.view.rowfornecedor, true)
 						   .add('Comprado Por', this.view.rowusuario)
 						   .add('Valor', this.view.rowvalor);
 		},

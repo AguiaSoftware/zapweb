@@ -12,6 +12,7 @@ namespace ZapWeb.Models
         public DateTime Data { get; set; }
         public int UnidadeId { get; set; }
         public int UsuarioId { get; set; }
+        public string Url { get; set; }
 
         [PetaPoco.Ignore] public Unidade Unidade { get; set; }
         [PetaPoco.Ignore] public Usuario Usuario { get; set; }

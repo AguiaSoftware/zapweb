@@ -194,6 +194,12 @@
 
             return new Lib.DataTime(this.date);
         },
+        
+        addMinutes: function(min){
+            this.date.setMinutes (this.date.getMinutes() + min );
+            
+            return new Lib.DataTime(this.date);
+        },
 
         toString: function () {
             return this.getDateStringFromFormat('dd/MM/yyyy');

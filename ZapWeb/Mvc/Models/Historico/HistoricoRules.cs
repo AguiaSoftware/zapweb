@@ -21,13 +21,13 @@ namespace ZapWeb.Models
             historico.Usuario = Account.Current.Usuario;
             historicoRepositorio.Insert(historico);
 
-            agendaRepositorio.Insert(new Agenda()
-            {
-                Descricao = historico.Descricao + " <a href='#Condominio/Editar/" + condominio.Id + "'>" + condominio.Nome + "</a>",
-                Data = historico.ProximoContato,
-                UnidadeId = condominio.UnidadeId,
-                Usuario = Account.Current.Usuario
-            });
+            //agendaRepositorio.Insert(new Agenda()
+            //{
+            //    Descricao = "<a href='#Condominio/Editar/" + condominio.Id + "'>" + condominio.Nome + "</a>",
+            //    Data = historico.ProximoContato,
+            //    UnidadeId = condominio.UnidadeId,
+            //    Usuario = Account.Current.Usuario
+            //});
 
             return true;
         }

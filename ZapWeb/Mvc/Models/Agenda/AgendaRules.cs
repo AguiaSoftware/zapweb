@@ -24,8 +24,25 @@ namespace ZapWeb.Models
             var agendaRepositorio = new AgendaRepositorio();
             var unidadeRepositorio = new UnidadeRepositorio();
             var unidade = unidadeRepositorio.Fetch(Account.Current.Usuario.Unidade.Id);
+            var historicoRepositorio = new HistoricoRepositorio();
+            var historicos = historicoRepositorio.Search(start, end, unidade);
+            var agendas = new List<Agenda>();
 
-            return agendaRepositorio.Search(start, end, unidade);
+            if(unidade.Tipo== UnidadeTipo.CENTRAL || unidade.Tipo== UnidadeTipo.ZAP)
+            {
+                foreach (var h in historicos)
+                {
+                    agendas.Add(new Agenda()
+                    {
+                        Id = h.Id,
+                        Data = h.ProximoContato,
+                        Url = "#Condominio/Editar/" + h.Condominio.Id,
+                        Descricao = h.Condominio.Nome
+                    });
+                }
+            }
+
+            return agendas;
         }
 
         public void UpdateData(Agenda agenda)

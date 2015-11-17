@@ -34,5 +34,22 @@ namespace ZapWeb.Models
             return this.Db.Fetch<Historico>(sql);
         }
 
+        public List<Historico> Search(DateTime start, DateTime end, Unidade unidade)
+        {
+            var sql = PetaPoco.Sql.Builder.Append("SELECT Historico.*, Condominio.*")
+                                          .Append("FROM Historico")
+                                          .Append("INNER JOIN Condominio ON Condominio.Id = Historico.CondominioId")
+                                          .Append("INNER JOIN Unidade ON Unidade.Id = Condominio.UnidadeId")
+                                          .Append("WHERE Historico.ProximoContato BETWEEN @0 AND @1", start, end)
+                                          .Append("AND (Unidade.Hierarquia LIKE @0 OR Unidade.Id = @1)", unidade.GetFullLevelHierarquia() + "%", unidade.Id);
+
+            return this.Db.Fetch<Historico, Condominio, Historico>((h, c)=> {
+
+                h.Condominio = c;
+
+                return h;
+            }, sql);
+        }
+
     }
 }
