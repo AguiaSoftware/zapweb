@@ -11,7 +11,21 @@ yum.define([
 			
 			this.title = 'Agenda';
 			
+            this.statusbar = new UI.StatusStripBar();
+			
+			this.unidadeLabel = new UI.StatusStrip.Label({
+                label: 'Unidade',
+                position: 'right'
+            });
+			
+			this.addLabel = new UI.StatusStrip.Label({
+                label: 'Adicionar Compromisso',
+                position: 'right'
+            });
+
 			this.voltar = new UI.Button();
+			
+			this.unidade = Unidade.Current;
 			
 			this.model = new Agenda.Model();
 		},
@@ -27,6 +41,30 @@ yum.define([
 		viewDidLoad: function(){
 			this.base.viewDidLoad();
 			
+			this.statusbar.add(this.unidadeLabel);
+            this.statusbar.add(new UI.StatusStrip.Separator({ position: 'right' }));
+			this.statusbar.add(this.addLabel);
+			
+			this.calendar.refresh();
+		},
+
+        showPopupSelectUnidade: function(){
+            var self = this;
+            var modal = new Unidade.Modal({
+                tipoUnidade: this.tipoUnidade
+            });
+
+            modal.render( this.view.element );
+
+            modal.open();
+
+            modal.event.listen('select', function(unidade){
+                self.refreshUnidade(unidade);
+            });
+        },
+		
+		refreshUnidade: function(unidade){
+			this.unidade = unidade;
 			this.calendar.refresh();
 		},
 		
@@ -34,7 +72,9 @@ yum.define([
 		
 			'{calendar} refresh': function(start, end, cb){
 				
-				this.model.feed(start.format(), end.format()).ok(function(items){
+				this.unidadeLabel.set( this.unidade.Nome );
+				
+				this.model.feed(start.format(), end.format(), this.unidade.Id).ok(function(items){
 					var arr = [];
 					
 					for (var i = 0; i < items.length; i++) {
@@ -59,7 +99,11 @@ yum.define([
 				});
 				
 				agenda.update();				
-			}
+			},
+
+            '{unidadeLabel} click': function(){
+                this.showPopupSelectUnidade();
+            }
 		}
 
 	});

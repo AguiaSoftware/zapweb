@@ -19,16 +19,26 @@ namespace ZapWeb.Models
             return true;
         }
 
-        public List<Agenda> Search(DateTime start, DateTime end)
+        public List<Agenda> Search(DateTime start, DateTime end, int unidadeId)
         {
-            var agendaRepositorio = new AgendaRepositorio();
-            var unidadeRepositorio = new UnidadeRepositorio();
-            var unidade = unidadeRepositorio.Fetch(Account.Current.Usuario.Unidade.Id);
-            var historicoRepositorio = new HistoricoRepositorio();
-            var historicos = historicoRepositorio.Search(start, end, unidade);
+            var agendaRepositorio = new AgendaRepositorio();          
             var agendas = new List<Agenda>();
 
-            if(unidade.Tipo== UnidadeTipo.CENTRAL || unidade.Tipo== UnidadeTipo.ZAP)
+            var unidadeRepositorio = new UnidadeRepositorio();
+            Unidade unidade = null;
+
+            if (Account.Current.Usuario.Unidade.Tipo == UnidadeTipo.ZAP)
+            {
+                unidade = unidadeRepositorio.Fetch(unidadeId);
+            }
+            else
+            {
+                unidade = unidadeRepositorio.Fetch(Account.Current.Usuario.Unidade.Id);
+            }
+
+            var historicoRepositorio = new HistoricoRepositorio();
+            var historicos = historicoRepositorio.Search(start, end, unidade);
+            if (unidade.Tipo == UnidadeTipo.CENTRAL || unidade.Tipo == UnidadeTipo.ZAP)
             {
                 foreach (var h in historicos)
                 {

@@ -29,7 +29,7 @@ yum.define([
 		},
 
 		actions: {
-			'feed': '/feed?start=:start&end=:end'
+			'feed': '/feed?start=:start&end=:end&unidadeId=:unidadeId'
 		}
 
 	});

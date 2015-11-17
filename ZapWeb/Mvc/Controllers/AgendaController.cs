@@ -10,11 +10,11 @@ namespace ZapWeb.Mvc.Controllers
     public class AgendaController : ZapWeb.Lib.Mvc.Controller
     {
 
-        public string Feed(DateTime start, DateTime end)
+        public string Feed(DateTime start, DateTime end, int unidadeId)
         {
             var rules = new AgendaRules();
 
-            return this.Success(rules.Search(start, end));
+            return this.Success(rules.Search(start, end, unidadeId));
         }
 
         public void Update(Agenda agenda)
