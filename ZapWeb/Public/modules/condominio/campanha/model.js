@@ -37,7 +37,8 @@ yum.define([
 
 		actions: {
 			'all': '/all?condominioId=:CondominioId',
-			'get': '/get?Id=:Id'
+			'get': '/get?Id=:Id',
+			'excluir': '/excluir'
 		},
 		
 		getUrlPdf: function(){

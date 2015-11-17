@@ -54,7 +54,6 @@ namespace ZapWeb.Models
         public Campanha Get(int Id)
         {
             var campanhaRepositorio = new CampanhaRepositorio();
-            var arquivoRules = new ArquivoRules();
 
             if (!Account.Current.Permissao.Has("UPDATE_CAMPANHA"))
             {
@@ -63,6 +62,29 @@ namespace ZapWeb.Models
             }
 
             return campanhaRepositorio.Simple(Id).IncludeAnexos().Get();
+        }
+
+        public bool Excluir(Campanha campanha)
+        {
+
+            if (!Account.Current.Permissao.Has("EXCLUIR_CAMPANHA"))
+            {
+                this.MessageError = "USUARIO_SEM_PERMISSAO";
+                return false;
+            }
+
+            var campanhaRepositorio = new CampanhaRepositorio();
+            var arquivoRepositorio = new ArquivoRepositorio();            
+            var current = campanhaRepositorio.Simple(campanha.Id).IncludeAnexos().Get();
+
+            foreach (var arquivo in current.Anexos)
+            {
+                arquivoRepositorio.Remove(arquivo);
+            }
+
+            campanhaRepositorio.Delete(campanha);
+
+            return true;
         }
 
         public List<Campanha> All(int condominioId)

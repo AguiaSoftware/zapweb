@@ -59,7 +59,11 @@ yum.define([
 			
 			'{EventGlobal} added::campanha': function(campanha){
 				this.refresh();
-			}
+			},
+			
+			'{EventGlobal} removed::campanha': function(campanha){
+				this.refresh();
+			}		
 		
 			// '{gerar} click': function(){
 			// 	var modal = new Condominio.Campanha.Modal();

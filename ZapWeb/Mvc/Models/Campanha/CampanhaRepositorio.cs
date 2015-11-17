@@ -36,7 +36,14 @@ namespace ZapWeb.Models
 
             this.InsertArquivos(campanha);
         }
-        
+
+        public void Delete(Campanha campanha)
+        {
+            this.Db.Delete(campanha);
+
+            this.Db.Execute("DELETE FROM CampanhaAnexo WHERE CampanhaAnexo.CampanhaId = @0", campanha.Id);
+        }
+
         private List<Arquivo> FetchAnexos(int campanhaId)
         {
             var sql = PetaPoco.Sql.Builder.Append("SELECT Arquivo.*")

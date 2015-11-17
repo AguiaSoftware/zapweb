@@ -92,6 +92,15 @@ yum.define([
                 }
             });
 
+            this.excluir = new UI.Button({                
+                label: 'Excluir',
+                iconLeft: 'fa fa-times',
+                classes: 'vermelho',
+                style: {
+                    'min-width': '120px'
+                }
+            });
+
             this.voltar = new UI.Button({
                 label: 'Voltar',
                 iconLeft: 'fa fa-arrow-circle-left',
@@ -117,6 +126,8 @@ yum.define([
 					Alert.error('Não foi possível', message);
 				});
 				
+			}else{
+				this.excluir.hide();
 			}
 			
 			this.base.viewDidLoad();
@@ -131,7 +142,28 @@ yum.define([
 					window.history.back();
 				});
 				
-			}
+			},
+
+            '{excluir} click': function(){
+                var self = this;  
+
+                Confirm.show('Atenção', 'Tem certeza que deseja excluir?<br/>Esta operação não poderá ser desfeita', function(b){
+                    
+                    if (b) {
+                        self.excluir.setLabel('Excluindo ...').lock();
+                        self.model.excluir().ok(function(model){
+
+							EventGlobal.trigger('removed::campanha', model);                            
+                            window.history.back();
+
+                        }).error(function(message){
+                            Alert.show('Não foi possível', message);
+                            self.excluir.setLabel('Excluir').unlock();
+                        });
+                    };
+
+                });
+            }
 		}
 
 	});

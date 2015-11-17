@@ -55,6 +55,18 @@ namespace ZapWeb.Mvc.Controllers
             return this.Success(campanha);
         }
 
+        public string Excluir(Campanha campanha)
+        {
+            var rules = new CampanhaRules();
+
+            if (!rules.Excluir(campanha))
+            {
+                return this.Error(rules.MessageError);
+            }
+
+            return this.Success(campanha);
+        }
+
         public ActionResult Download(int campanhaId, string nome, string hash)
         {
             var rules = new CampanhaRules();
