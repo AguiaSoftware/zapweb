@@ -1,20 +1,20 @@
-.condominio-material-painel-results{
+.condominio-campanha-painel-results{
 	background: #d9d9d9;
     padding: 3px;
 }
 
-.condominio-material-painel-item{
+.condominio-campanha-painel-item{
 	padding: 10px 15px;
     border: 2px solid #d9d9d9;
     background: #fff;
     margin-bottom: 3px;
 }
 
-.condominio-material-painel-item-cmd{
+.condominio-campanha-painel-item-cmd{
 	margin-top: 10px;
 }
 
-.condominio-material-painel-gerar{
+.condominio-campanha-painel-gerar{
     float: right;
     margin-top: -11px;    
 }

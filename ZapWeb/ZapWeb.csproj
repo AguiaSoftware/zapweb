@@ -166,7 +166,7 @@
     <Compile Include="Mvc\Controllers\ArquivoController.cs" />
     <Compile Include="Mvc\Controllers\CondominioController.cs" />
     <Compile Include="Mvc\Controllers\HistoricoController.cs" />
-    <Compile Include="Mvc\Controllers\MaterialController.cs" />
+    <Compile Include="Mvc\Controllers\CampanhaController.cs" />
     <Compile Include="Mvc\Controllers\RealTimeController.cs" />
     <Compile Include="Mvc\Controllers\ReceitaRelatorioController.cs" />
     <Compile Include="Mvc\Controllers\DespesaRelatorioController.cs" />
@@ -229,9 +229,9 @@
     <Compile Include="Mvc\Models\Historico\Historico.cs" />
     <Compile Include="Mvc\Models\Historico\HistoricoRepositorio.cs" />
     <Compile Include="Mvc\Models\Historico\HistoricoRules.cs" />
-    <Compile Include="Mvc\Models\Material\Material.cs" />
-    <Compile Include="Mvc\Models\Material\MaterialRepositorio.cs" />
-    <Compile Include="Mvc\Models\Material\MaterialRules.cs" />
+    <Compile Include="Mvc\Models\Campanha\Campanha.cs" />
+    <Compile Include="Mvc\Models\Campanha\CampanhaRepositorio.cs" />
+    <Compile Include="Mvc\Models\Campanha\CampanhaRules.cs" />
     <Compile Include="Mvc\Models\Notificacao\NotificacaoUsuarioRepositorio.cs" />
     <Compile Include="Mvc\Models\Notificacao\NotificacaoRepositorio.cs" />
     <Compile Include="Mvc\Models\Notificacao\Notificacao.cs" />

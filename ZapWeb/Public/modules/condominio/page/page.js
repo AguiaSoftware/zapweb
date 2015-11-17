@@ -2,7 +2,7 @@
 	PI.Url.create('Condominio', '/page/page.html'),
 	PI.Url.create('Condominio', '/page/page.css'),
 	PI.Url.create('Condominio', '/historico/painel.js'),
-	PI.Url.create('Condominio', '/material/painel.js'),
+	PI.Url.create('Condominio', '/campanha/painel.js'),
     PI.Url.create('Administradora', '/textbox/textbox.js'),
     
     PI.Url.create('Lib', '/rating/rating.js')
@@ -88,7 +88,7 @@
             });
 
             this.contatos = new Condominio.Historico.Painel();
-            this.materiais = new Condominio.Material.Painel();
+            this.campanhas = new Condominio.Campanha.Painel();
 
             this.salvar = new UI.Button({
                 label: 'Salvar',
@@ -116,7 +116,7 @@
             
             this.tabbar.add('geral', 'Dados Gerais', true);
             this.tabbar.add('contatos', 'Contatos');
-            this.tabbar.add('materiais', 'Materiais');
+            this.tabbar.add('campanhas', 'Campanhas');
             
             app.home.setTitle('Adicionar Condomínio');
             
@@ -124,12 +124,12 @@
                 this.unidade.set(Unidade.Current);
                 
                 this.tabbar.hideTab('contatos');
-                this.tabbar.hideTab('materiais');
+                this.tabbar.hideTab('campanhas');
                 
             }else{
                 
                 this.contatos.load( this.model );
-                this.materiais.load( this.model );
+                this.campanhas.load( this.model );
                 
                 this.model.get().ok(function(model){
                     self.model = model;

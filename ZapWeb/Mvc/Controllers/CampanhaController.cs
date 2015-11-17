@@ -8,57 +8,57 @@ using ZapWeb.Models;
 
 namespace ZapWeb.Mvc.Controllers
 {
-    public class MaterialController : ZapWeb.Lib.Mvc.Controller
+    public class CampanhaController : ZapWeb.Lib.Mvc.Controller
     {
 
-        public string Add(Material material)
+        public string Add(Campanha campanha)
         {
-            var rules = new MaterialRules();
+            var rules = new CampanhaRules();
 
-            if (!rules.Adicionar(material))
+            if (!rules.Adicionar(campanha))
             {
                 return this.Error(rules.MessageError);
             }
 
-            return this.Success(material);
+            return this.Success(campanha);
         }
 
-        public string Update(Material material)
+        public string Update(Campanha campanha)
         {
-            var rules = new MaterialRules();
+            var rules = new CampanhaRules();
 
-            if (!rules.Update(material))
+            if (!rules.Update(campanha))
             {
                 return this.Error(rules.MessageError);
             }
 
-            return this.Success(material);
+            return this.Success(campanha);
         }
 
         public string All(int condominioId)
         {
-            var rules = new MaterialRules();
+            var rules = new CampanhaRules();
 
             return this.Success(rules.All(condominioId));
         }
 
         public string Get(int Id)
         {
-            var rules = new MaterialRules();
-            var material = rules.Get(Id);
+            var rules = new CampanhaRules();
+            var campanha = rules.Get(Id);
 
-            if(material == null)
+            if(campanha == null)
             {
                 return this.Error(rules.MessageError);
             }
 
-            return this.Success(material);
+            return this.Success(campanha);
         }
 
-        public ActionResult Download(int materialId, string nome, string hash)
+        public ActionResult Download(int campanhaId, string nome, string hash)
         {
-            var rules = new MaterialRules();
-            var filename = rules.GetPdfFilename(materialId, hash);
+            var rules = new CampanhaRules();
+            var filename = rules.GetPdfFilename(campanhaId, hash);
             
             System.Net.Mime.ContentDisposition cd = new System.Net.Mime.ContentDisposition
             {

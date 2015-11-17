@@ -1,8 +1,8 @@
 yum.define([
 	PI.Url.create('Condominio', '/page/page.js'),
 	PI.Url.create('Condominio', '/search/page.js'),
-	PI.Url.create('Condominio', '/material/page/page.js'),
-	PI.Url.create('Condominio', '/material/model.js'),
+	PI.Url.create('Condominio', '/campanha/page/page.js'),
+	PI.Url.create('Condominio', '/campanha/model.js'),
 	PI.Url.create('Condominio', '/model.js')
 ], function (html) {
 
@@ -44,10 +44,10 @@ yum.define([
 				}, 1);
 			},
 			
-			'Condominio/Gerar/Material/:Id': function(condominioId){
+			'Condominio/Gerar/Campanha/:Id': function(condominioId){
 				setTimeout(function() {
-					var page = new Condominio.Material.Page({
-						model: new Condominio.Material.Model({
+					var page = new Condominio.Campanha.Page({
+						model: new Condominio.Campanha.Model({
 							Condominio: new Condominio.Model({
 								Id: condominioId
 							})
@@ -58,11 +58,11 @@ yum.define([
 				}, 1);
 			},
 			
-			'Condominio/Editar/Material/:Id': function(materialId){
+			'Condominio/Editar/Campanha/:Id': function(campanhaId){
 				setTimeout(function() {
-					var page = new Condominio.Material.Page({
-						model: new Condominio.Material.Model({
-							Id: materialId
+					var page = new Condominio.Campanha.Page({
+						model: new Condominio.Campanha.Model({
+							Id: campanhaId
 						})
 					});
 					

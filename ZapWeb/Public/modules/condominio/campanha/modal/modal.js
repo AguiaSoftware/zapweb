@@ -1,13 +1,13 @@
 yum.define([
-	PI.Url.create('Condominio', '/material/modal/modal.html'),
-	// PI.Url.create('Condominio', '/material/modal/modal.css')
+	PI.Url.create('Condominio', '/campanha/modal/modal.html'),
+	// PI.Url.create('Condominio', '/campanha/modal/modal.css')
 ], function(html){
 
-	Class('Condominio.Material.Modal').Extend(UI.Modal).Body({
+	Class('Condominio.Campanha.Modal').Extend(UI.Modal).Body({
 
 		instances: function(){
 			this.view.inject({
-				title: 'Gerar Material',
+				title: 'Nova Campanha',
 				body: html
 			});
 			

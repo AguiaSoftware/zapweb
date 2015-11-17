@@ -1,9 +1,9 @@
 yum.define([
-	PI.Url.create('Condominio', '/material/page/page.html'),
-	// PI.Url.create('Condominio', '/material/page/page.css')
+	PI.Url.create('Condominio', '/campanha/page/page.html'),
+	// PI.Url.create('Condominio', '/campanha/page/page.css')
 ], function(html){
 
-	Class('Condominio.Material.Page').Extend(PI.Page).Body({
+	Class('Condominio.Campanha.Page').Extend(PI.Page).Body({
 
 		instances: function(){
 			this.view = new Mvc.View(html);
@@ -101,13 +101,15 @@ yum.define([
                 }
             });
 			
-			this.title = 'Novo Material';
+			this.title = 'Nova Campanha';
 		},
 		
 		viewDidLoad: function(){
 			var self = this;
 			
 			if(this.model.isNotNew()){
+				
+				this.breadcumb.setTitle('Editar Campanha');
 				
 				this.model.get().ok(function(model){
 					self.injectModelToView( model );
@@ -125,7 +127,7 @@ yum.define([
 			'{salvar} click': function(){				
 				
 				this.saveModel(this.model).ok(function(model){
-					EventGlobal.trigger('added::material', model);
+					EventGlobal.trigger('added::campanha', model);
 					window.history.back();
 				});
 				

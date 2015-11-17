@@ -2,14 +2,14 @@ yum.define([
 	
 ], function () {
 
-	Class('Condominio.Material.Model').Extend(Mvc.Model.Base).Body({
+	Class('Condominio.Campanha.Model').Extend(Mvc.Model.Base).Body({
 
 		instances: function () {
 
 		},
 
 		init: function () {
-			this.base.init('/Material');
+			this.base.init('/Campanha');
 		},
 
 		validations: function () {
@@ -27,7 +27,7 @@ yum.define([
 		},
 
 		initWithJson: function (json) {
-			var model = new Condominio.Material.Model(json);
+			var model = new Condominio.Campanha.Model(json);
 
 			model.DataInicio = Lib.DataTime.create(json.DataInicio, 'yyyy-MM-ddThh:mm:ss').getDateStringFromFormat('dd/MM/yyyy');
 			model.DataFim = Lib.DataTime.create(json.DataFim, 'yyyy-MM-ddThh:mm:ss').getDateStringFromFormat('dd/MM/yyyy');
@@ -41,7 +41,7 @@ yum.define([
 		},
 		
 		getUrlPdf: function(){
-			return PI.Url.create('localhost', '/material/download?materialId=' + this.Material.Id + '&nome=' + PI.File.filename( this.Nome ) + '&hash=' + this.Hash).getUrl();
+			return PI.Url.create('localhost', '/campanha/download?campanhaId=' + this.Campanha.Id + '&nome=' + PI.File.filename( this.Nome ) + '&hash=' + this.Hash).getUrl();
 		}
 
 	});

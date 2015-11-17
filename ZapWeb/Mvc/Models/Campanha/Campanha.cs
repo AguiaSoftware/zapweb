@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ZapWeb.Models
 {
-    public class Material
+    public class Campanha
     {
         public int Id { get; set; }
         public DateTime Data { get; set; }

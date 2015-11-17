@@ -12,70 +12,69 @@ using Ionic.Zip;
 
 namespace ZapWeb.Models
 {
-    public class MaterialRules : ZapWeb.Lib.Mvc.BusinessLogic
+    public class CampanhaRules : ZapWeb.Lib.Mvc.BusinessLogic
     {
 
-        public bool Adicionar(Material material)
+        public bool Adicionar(Campanha campanha)
         {
-            var materialRepositorio = new MaterialRepositorio();
+            var campanhaRepositorio = new CampanhaRepositorio();
 
-            if (!Account.Current.Permissao.Has("ADD_MATERIAL"))
+            if (!Account.Current.Permissao.Has("ADD_CAMPANHA"))
             {
                 this.MessageError = "USUARIO_SEM_PERMISSAO";
                 return false;
             }
 
-            material.Usuario = Account.Current.Usuario;
-            materialRepositorio.Insert(material);
+            campanha.Usuario = Account.Current.Usuario;
+            campanhaRepositorio.Insert(campanha);
 
             return true;
         }
 
-        public bool Update(Material material)
+        public bool Update(Campanha campanha)
         {
-            var materialRepositorio = new MaterialRepositorio();
+            var campanhaRepositorio = new CampanhaRepositorio();
 
-            if (!Account.Current.Permissao.Has("UPDATE_MATERIAL"))
+            if (!Account.Current.Permissao.Has("UPDATE_CAMPANHA"))
             {
                 this.MessageError = "USUARIO_SEM_PERMISSAO";
                 return false;
             }
 
-            var current = materialRepositorio.Fetch(material.Id);
-            material.CondominioId = current.CondominioId;
-            material.UsuarioId = current.UsuarioId;
+            var current = campanhaRepositorio.Simple(campanha.Id).Get();
+            campanha.CondominioId = current.CondominioId;
+            campanha.UsuarioId = current.UsuarioId;
 
-
-            material.Usuario = Account.Current.Usuario;
-            materialRepositorio.Update(material);
+            campanha.Usuario = Account.Current.Usuario;
+            campanhaRepositorio.Update(campanha);
 
             return true;
         }
 
-        public Material Get(int Id)
+        public Campanha Get(int Id)
         {
-            var materialRepositorio = new MaterialRepositorio();
+            var campanhaRepositorio = new CampanhaRepositorio();
             var arquivoRules = new ArquivoRules();
 
-            if (!Account.Current.Permissao.Has("UPDATE_MATERIAL"))
+            if (!Account.Current.Permissao.Has("UPDATE_CAMPANHA"))
             {
                 this.MessageError = "USUARIO_SEM_PERMISSAO";
                 return null;
             }
 
-            return materialRepositorio.Fetch(Id); 
+            return campanhaRepositorio.Simple(Id).IncludeAnexos().Get();
         }
 
-        public List<Material> All(int condominioId)
+        public List<Campanha> All(int condominioId)
         {
-            var materialRepositorio = new MaterialRepositorio();
+            var campanhaRepositorio = new CampanhaRepositorio();
 
-            return materialRepositorio.FetchByCondominioId(condominioId);
+            return campanhaRepositorio.FetchByCondominioId(condominioId).IncludeAnexos().GetList();
         }
 
-        public string GetPdfFilename(int materialId, string hash)
+        public string GetPdfFilename(int campanhaId, string hash)
         {
-            var materialRepositorio = new MaterialRepositorio();
+            var campanhaRepositorio = new CampanhaRepositorio();
             var unidadeRepositorio = new UnidadeRepositorio();
             var condominioRepositorio = new CondominioRepositorio();
             var usuarioRepositorio = new UsuarioRepositorio();
@@ -88,27 +87,27 @@ namespace ZapWeb.Models
 
             System.IO.File.Copy(filename, filenameCopy, true);
 
-            var material = materialRepositorio.Simple(materialId);
-            var condominio = condominioRepositorio.Simple(material.CondominioId);
+            var campanha = campanhaRepositorio.Simple(campanhaId).Get();
+            var condominio = condominioRepositorio.Simple(campanha.CondominioId);
             var unidade = unidadeRepositorio.Fetch(condominio.UnidadeId);
             var usuarios = usuarioRepositorio.FetchUsuariosByUnidade(unidade, false);
 
             var content = this.GetContentDocument(filename);
             var keywords = new Dictionary<string, string>();
-            keywords.Add("_DATA_INICIO_", ConvertDateToString( material.DataInicio));
-            keywords.Add("_DIA_INICIO_", material.DataInicio.Day.ToString());
-            keywords.Add("_MES_INICIO_", ConvertDateToNomeMes(material.DataInicio));
+            keywords.Add("_DATA_INICIO_", ConvertDateToString( campanha.DataInicio));
+            keywords.Add("_DIA_INICIO_", campanha.DataInicio.Day.ToString());
+            keywords.Add("_MES_INICIO_", ConvertDateToNomeMes(campanha.DataInicio));
 
-            keywords.Add("_DIA_FIM_", material.DataFim.Day.ToString());
-            keywords.Add("_MES_FIM_", ConvertDateToNomeMes(material.DataFim));
-            keywords.Add("_DATA_FIM_", ConvertDateToString(material.DataFim));
+            keywords.Add("_DIA_FIM_", campanha.DataFim.Day.ToString());
+            keywords.Add("_MES_FIM_", ConvertDateToNomeMes(campanha.DataFim));
+            keywords.Add("_DATA_FIM_", ConvertDateToString(campanha.DataFim));
 
-            keywords.Add("_HORA_INICIO_", material.HoraInicio);
-            keywords.Add("_HORA_FIM_", material.HoraFim);
-            keywords.Add("_VALOR_A_VISTA_", ConvertValorToString( material.ValorAVista));
-            keywords.Add("_VALOR_CHEQUE_", ConvertValorToString(material.ValorCheque));
-            keywords.Add("_ACRESCIMO_", ConvertValorToString(material.Acrescimo));
-            keywords.Add("_DESCONTO_", ConvertValorToString(material.Desconto));
+            keywords.Add("_HORA_INICIO_", campanha.HoraInicio);
+            keywords.Add("_HORA_FIM_", campanha.HoraFim);
+            keywords.Add("_VALOR_A_VISTA_", ConvertValorToString( campanha.ValorAVista));
+            keywords.Add("_VALOR_CHEQUE_", ConvertValorToString(campanha.ValorCheque));
+            keywords.Add("_ACRESCIMO_", ConvertValorToString(campanha.Acrescimo));
+            keywords.Add("_DESCONTO_", ConvertValorToString(campanha.Desconto));
 
             keywords.Add("_NOME_CONDOMINIO_", condominio.Nome);
             keywords.Add("_QUANTIDADE_ANDARES_POR_BLOCO_", condominio.QuantidadeAndaresBloco.ToString());
