@@ -47,7 +47,8 @@ namespace ZapWeb.Models
                         Id = h.Id,
                         Data = h.ProximoContato,
                         Url = "#Condominio/Editar/" + h.Condominio.Id + "/Historico?id=" + h.Id,
-                        Descricao = h.Condominio.Nome
+                        Descricao = h.Condominio.Nome,
+                        Tipo = AgendaTipo.HISTORICO
                     });
                 }
             }

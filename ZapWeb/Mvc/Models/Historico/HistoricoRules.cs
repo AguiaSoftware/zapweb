@@ -39,5 +39,12 @@ namespace ZapWeb.Models
             return historicoRepositorico.SimpleByCondominioId(condominioId);
         }
 
+        public void UpdateData(int id, DateTime data)
+        {
+            var historicoRepositorico = new HistoricoRepositorio();
+
+            historicoRepositorico.UpdateDate(id, data);
+        }
+
     }
 }

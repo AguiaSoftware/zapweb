@@ -84,7 +84,8 @@ yum.define([
 							description: items[i].Descricao,
 							start: items[i].Data,
 							end: items[i].DataFinal,
-							url: items[i].Url
+							url: items[i].Url,
+							model: items[i]
 						});
 					}
 					
@@ -92,13 +93,13 @@ yum.define([
 				});
 			},
 			
-			'{calendar} update::datetime': function(obj){
-				var agenda = new Agenda.Model({
-					Id: obj.id,
-					Data: obj.start.format('DD/MM/YYYY hh:mm:ss')
-				});
-				
-				agenda.update();				
+			'{calendar} update::datetime': function(event){
+				if(event.model.Tipo == Agenda.Tipo.HISTORICO){					
+					Condominio.Historico.Model.create({
+						Id: event.id,
+						ProximoContato: event.start.format('DD/MM/YYYY hh:mm:ss') 
+					}).updateDate();
+				}
 			},
 
             '{unidadeLabel} click': function(){

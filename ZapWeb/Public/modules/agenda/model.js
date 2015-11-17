@@ -2,6 +2,11 @@ yum.define([
 	
 ], function () {
 
+	Class('Agenda.Tipo').Static({
+		HISTORICO: 1,
+		MANUAL: 2
+	});
+
 	Class('Agenda.Model').Extend(Mvc.Model.Base).Body({
 
 		instances: function () {

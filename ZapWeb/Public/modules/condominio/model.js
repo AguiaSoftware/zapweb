@@ -22,7 +22,7 @@ yum.define([
 			var model = new Condominio.Model(json);
 
 			model.Unidade = Unidade.Model.create().initWithJson(model.Unidade);
-			model.Data = Lib.DataTime.create(json.DataUltimaCampanha, 'yyyy-MM-ddThh:mm:ss').getDateStringFromFormat('dd/MM/yyyy');
+			model.DataUltimaCampanha = Lib.DataTime.create(json.DataUltimaCampanha, 'yyyy-MM-ddThh:mm:ss').getDateStringFromFormat('dd/MM/yyyy');
 			model.Endereco = Endereco.Model.create().initWithJson(json.Endereco);
 			
 			return model;

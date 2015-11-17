@@ -68,7 +68,7 @@
             
             this.dataUltimaCampanha = new UI.DateBox({
 				placeholder: 'Data',
-                dateModel: 'DataUltimaCampanha'
+                dataModel: 'DataUltimaCampanha'
             });
             
             this.unidade = new Unidade.Search.TextBox({

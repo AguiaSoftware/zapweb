@@ -29,5 +29,14 @@ namespace ZapWeb.Mvc.Controllers
             return this.Success(rules.All(condominioId));
         }
 
+        public string UpdateDate(Historico historico)
+        {
+            var rules = new HistoricoRules();
+
+            rules.UpdateData(historico.Id, historico.ProximoContato);
+
+            return this.Success(new { });
+        }
+
     }
 }

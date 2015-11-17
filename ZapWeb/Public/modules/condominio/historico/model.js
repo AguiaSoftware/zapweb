@@ -34,7 +34,8 @@ yum.define([
 		},
 
 		actions: {
-			'all': '/all?condominioId=:CondominioId'
+			'all': '/all?condominioId=:CondominioId',
+			'updateDate': '/updateDate'
 		}
 
 	});

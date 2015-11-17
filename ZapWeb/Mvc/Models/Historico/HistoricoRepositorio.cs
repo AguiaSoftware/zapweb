@@ -52,5 +52,12 @@ namespace ZapWeb.Models
             }, sql);
         }
 
+        public void UpdateDate(int Id, DateTime data) {
+            this.Db.Update("Historico", "Id", new {
+                Id = Id,
+                ProximoContato = data
+            });
+        }
+
     }
 }

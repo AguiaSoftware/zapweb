@@ -5,6 +5,13 @@ using System.Web;
 
 namespace ZapWeb.Models
 {
+
+    public enum AgendaTipo
+    {
+        HISTORICO = 1,
+        MANUAL = 2
+    }
+
     public class Agenda
     {
         public int Id { get; set; }
@@ -14,6 +21,7 @@ namespace ZapWeb.Models
         public int UsuarioId { get; set; }
         public string Url { get; set; }
 
+        [PetaPoco.Ignore] public AgendaTipo Tipo { get; set; }
         [PetaPoco.Ignore] public Unidade Unidade { get; set; }
         [PetaPoco.Ignore] public Usuario Usuario { get; set; }
     }
