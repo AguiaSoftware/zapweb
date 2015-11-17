@@ -36,6 +36,22 @@ yum.define([
 				}, 1);
 			},			
 			
+			'Condominio/Editar/:Id/Historico': function(Id){
+				setTimeout(function() {
+					var page = new Condominio.Page({
+						model: new Condominio.Model({
+							Id: Id							
+						})
+					});
+										
+					page.contatos.evidence( PI.Url.Hash.getQuery('id') );
+					
+					app.home.setPage( page );					
+					
+					page.tabbar.select('contatos');
+				}, 1);
+			},			
+			
 			'Condominio/Pesquisar': function(){
 				setTimeout(function() {
 					var page = new Condominio.Search.Page();

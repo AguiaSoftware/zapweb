@@ -20,13 +20,12 @@ yum.define([
 			
 			this.popup = new Condominio.Historico.Popup();
 			this.model = new Condominio.Historico.Model();
+			
+			this.rows = [];
 		},
 		
-		viewDidLoad: function(){
-			
+		viewDidLoad: function(){			
 			this.popup.showOnClick( this.add );
-			
-			this.base.viewDidLoad();
 		},
 		
 		load: function( condominio ){			
@@ -54,6 +53,8 @@ yum.define([
 				
 				this.addRow(h);
 			}
+						
+			this.base.viewDidLoad();
 		},
 		
 		addRow: function(historico){
@@ -62,6 +63,29 @@ yum.define([
 			});
 
 			row.render( this.view.tbody );
+			
+			this.rows.push(row);
+		},
+		
+		evidence: function(id){
+			var self = this;
+			
+			if(this.isRender()){
+				self.__evidence(id);					
+			}else{
+				this.event.listen('view::did::load', function(){
+					self.__evidence(id);
+				});
+			}
+			
+		},
+		
+		__evidence: function(id){
+			var r = this.rows.find(function(r){
+				return r.historico.Id == id;
+			});
+			
+			r.evidence();
 		},
 		
 		events: {

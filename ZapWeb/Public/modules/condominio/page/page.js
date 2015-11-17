@@ -114,8 +114,8 @@
         viewDidLoad: function () {
             var self = this;
             
-            this.tabbar.add('geral', 'Dados Gerais');
-            this.tabbar.add('contatos', 'Contatos', true);
+            this.tabbar.add('geral', 'Dados Gerais', true);
+            this.tabbar.add('contatos', 'Contatos');
             this.tabbar.add('campanhas', 'Campanhas');
             
             

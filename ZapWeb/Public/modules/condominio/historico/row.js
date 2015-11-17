@@ -12,11 +12,17 @@ yum.define([
 			});
 		},
 		
-		viewDidLoad: function(){
-			
+		viewDidLoad: function(){			
 			this.rank.set( this.historico.Rank );
 			
 			this.base.viewDidLoad();
+		},
+		
+		evidence: function(){
+			this.view.element.evidence({
+				start: '#ffffff',
+				end: '#FFE097'
+			});
 		}
 
 	});
