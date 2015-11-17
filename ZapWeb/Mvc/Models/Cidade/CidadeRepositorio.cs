@@ -7,7 +7,7 @@ using ZapWeb.Lib.Mvc;
 
 namespace ZapWeb.Models
 {
-    public class CidadeRepositorio : Repositorio
+    public class CidadeRepositorio : RepositorioTemp
     {
 
         public List<Cidade> Search(string nome) {

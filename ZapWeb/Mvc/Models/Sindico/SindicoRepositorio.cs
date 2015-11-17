@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ZapWeb.Models
 {
-    public class SindicoRepositorio : ZapWeb.Lib.Mvc.Repositorio
+    public class SindicoRepositorio : ZapWeb.Lib.Mvc.RepositorioTemp
     {
 
         public Sindico Insert(Sindico sindico)

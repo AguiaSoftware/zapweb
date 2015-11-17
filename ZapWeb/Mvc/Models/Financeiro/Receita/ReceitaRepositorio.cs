@@ -7,7 +7,7 @@ using ZapWeb.Lib.Mvc;
 
 namespace ZapWeb.Models
 {
-    public class ReceitaRepositorio : Repositorio
+    public class ReceitaRepositorio : RepositorioTemp
     {
         public void Add(Receita receita) {
             receita.UnidadeId = receita.Unidade.Id;

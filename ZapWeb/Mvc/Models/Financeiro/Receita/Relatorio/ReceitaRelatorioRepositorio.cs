@@ -7,7 +7,7 @@ using ZapWeb.Lib.Mvc;
 
 namespace ZapWeb.Models
 {
-    public class ReceitaRelatorioRepositorio : Repositorio
+    public class ReceitaRelatorioRepositorio : RepositorioTemp
     {
         
         public List<Receita> ReceitasUnidadesFilhas(Unidade central, int mes, int ano)

@@ -7,7 +7,7 @@ using ZapWeb.Lib.Mvc;
 
 namespace ZapWeb.Models
 {
-    public class EnderecoRepositorio : Repositorio
+    public class EnderecoRepositorio : RepositorioTemp
     {
         public void Insert(Endereco endereco)
         {

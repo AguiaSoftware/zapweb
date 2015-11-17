@@ -7,7 +7,7 @@ using ZapWeb.Lib.Mvc;
 
 namespace ZapWeb.Models
 {
-    public class AccountRepositorio : Repositorio
+    public class AccountRepositorio : RepositorioTemp
     {
         public void Add(Account account) {
             account.Ativa = true;

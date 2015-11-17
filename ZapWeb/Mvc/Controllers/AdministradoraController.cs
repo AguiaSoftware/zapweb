@@ -20,7 +20,7 @@ namespace ZapWeb.Mvc.Controllers
         public string Update(Administradora administradora)
         {
             var rules = new AdministradoraRules();
-
+            
             if (!rules.Update(administradora))
             {
                 return this.Error(rules.MessageError);

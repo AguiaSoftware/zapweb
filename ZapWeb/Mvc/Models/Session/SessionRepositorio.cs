@@ -7,7 +7,7 @@ using ZapWeb.Lib.Mvc;
 
 namespace ZapWeb.Models
 {
-    public class SessionRepositorio : Repositorio
+    public class SessionRepositorio : RepositorioTemp
     {
 
         public void Add(Session session) {

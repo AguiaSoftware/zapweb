@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ZapWeb.Models
 {
-    public class CondominioRepositorio : ZapWeb.Lib.Mvc.Repositorio
+    public class CondominioRepositorio : ZapWeb.Lib.Mvc.RepositorioTemp
     {
         
         public Condominio Insert(Condominio condominio)

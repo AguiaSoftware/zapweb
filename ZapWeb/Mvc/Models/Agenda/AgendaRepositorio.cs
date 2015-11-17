@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ZapWeb.Models
 {
-    public class AgendaRepositorio : ZapWeb.Lib.Mvc.Repositorio
+    public class AgendaRepositorio : ZapWeb.Lib.Mvc.RepositorioTemp
     {
 
         public Agenda Insert(Agenda agenda)

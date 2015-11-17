@@ -7,7 +7,7 @@ using ZapWeb.Lib.Mvc;
 
 namespace ZapWeb.Models
 {
-    public class TipoPermissaoRepositorio : Repositorio
+    public class TipoPermissaoRepositorio : RepositorioTemp
     {
         public List<TipoPermissao> FetchAll() {
             var sql = PetaPoco.Sql.Builder.Append("SELECT * FROM TipoPermissao ORDER BY Ordem");

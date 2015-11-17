@@ -7,7 +7,7 @@ using ZapWeb.Lib.Mvc;
 
 namespace ZapWeb.Models
 {
-    public class RealTimeRepositorio : Repositorio
+    public class RealTimeRepositorio : RepositorioTemp
     {
         public RealTime Fetch(string sessionId) {
             var sql = PetaPoco.Sql.Builder.Append("SELECT RealTime.*")

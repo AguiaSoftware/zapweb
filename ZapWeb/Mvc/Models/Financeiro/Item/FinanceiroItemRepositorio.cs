@@ -7,7 +7,7 @@ using ZapWeb.Lib.Mvc;
 
 namespace ZapWeb.Models
 {
-    public class FinanceiroItemRepositorio : Repositorio
+    public class FinanceiroItemRepositorio : RepositorioTemp
     {
         public void Add(List<FinanceiroItem> items) {
 

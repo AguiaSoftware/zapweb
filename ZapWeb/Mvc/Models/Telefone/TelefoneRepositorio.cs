@@ -7,7 +7,7 @@ using ZapWeb.Lib.Mvc;
 
 namespace ZapWeb.Models
 {
-    public class TelefoneRepositorio : Repositorio
+    public class TelefoneRepositorio : RepositorioTemp
     {
         public void Insert(List<Telefone> telefones)
         {

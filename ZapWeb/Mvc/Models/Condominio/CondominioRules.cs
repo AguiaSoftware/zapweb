@@ -80,7 +80,7 @@ namespace ZapWeb.Models
             condominio.Endereco = enderecoRepositorio.Fetch(condominio.EnderecoId);
             condominio.Sindico = contatoRepositorio.Fetch(condominio.SindicoId);
             condominio.Zelador = contatoRepositorio.Fetch(condominio.ZeladorId);
-            condominio.Administradora = administradoraRepositorio.Fetch(condominio.AdministradoraId);
+            condominio.Administradora = administradoraRepositorio.Simple(condominio.AdministradoraId).Get();
 
             if (!condominio.Unidade.IsInTreeView())
             {

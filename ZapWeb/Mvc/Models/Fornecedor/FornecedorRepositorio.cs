@@ -7,7 +7,7 @@ using ZapWeb.Lib.Mvc;
 
 namespace ZapWeb.Models
 {
-    public class FornecedorRepositorio : Repositorio
+    public class FornecedorRepositorio : RepositorioTemp
     {
         public void Add(Fornecedor fornecedor) {
             this.Db.Insert(fornecedor);

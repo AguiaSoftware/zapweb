@@ -7,7 +7,7 @@ using ZapWeb.Lib.Mvc;
 
 namespace ZapWeb.Models
 {
-    public class ContatoRepositorio : Repositorio
+    public class ContatoRepositorio : RepositorioTemp
     {
         public void Insert(Contato contato)
         {

@@ -7,7 +7,7 @@ using ZapWeb.Lib.Mvc;
 
 namespace ZapWeb.Models
 {
-    public class NotificacaoUsuarioRepositorio : Repositorio
+    public class NotificacaoUsuarioRepositorio : RepositorioTemp
     {
 
         public void Add(NotificacaoUsuario notificacaoUsuario) {

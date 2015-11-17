@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ZapWeb.Models
 {
-    public class MaterialRepositorio : ZapWeb.Lib.Mvc.Repositorio
+    public class MaterialRepositorio : ZapWeb.Lib.Mvc.RepositorioTemp
     {
 
         public Material Insert(Material material)

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ZapWeb.Models
 {
-    public class HistoricoRepositorio : ZapWeb.Lib.Mvc.Repositorio
+    public class HistoricoRepositorio : ZapWeb.Lib.Mvc.RepositorioTemp
     {
 
         public Historico Insert(Historico historico)

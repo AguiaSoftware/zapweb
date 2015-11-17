@@ -7,7 +7,7 @@ using ZapWeb.Lib.Mvc;
 
 namespace ZapWeb.Models
 {
-    public class DespesaRepositorio : Repositorio
+    public class DespesaRepositorio : RepositorioTemp
     {
         public void Add(Despesa despesa) {
 

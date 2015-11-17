@@ -7,7 +7,7 @@ using ZapWeb.Lib.Mvc;
 
 namespace ZapWeb.Models
 {
-    public class GrupoPermissaoRepositorio : Repositorio
+    public class GrupoPermissaoRepositorio : RepositorioTemp
     {
 
         public void Add(GrupoPermissao grupo) {

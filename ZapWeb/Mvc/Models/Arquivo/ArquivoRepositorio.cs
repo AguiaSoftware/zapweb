@@ -7,7 +7,7 @@ using ZapWeb.Lib.Mvc;
 
 namespace ZapWeb.Models
 {
-    public class ArquivoRepositorio : Repositorio
+    public class ArquivoRepositorio : RepositorioTemp
     {
 
         public void Add(Arquivo arquivo) {

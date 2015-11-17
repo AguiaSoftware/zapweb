@@ -26,6 +26,9 @@ namespace ZapWeb.Models
         {
             var adminRepositorio = new AdministradoraRepositorio();
             var enderecoRepositorio = new EnderecoRepositorio();
+            var telefoneRepositorio = new TelefoneRepositorio();
+
+            telefoneRepositorio.Insert(administradora.Telefones);
 
             adminRepositorio.Update(administradora);
             enderecoRepositorio.Update(administradora.Endereco);
@@ -37,17 +40,17 @@ namespace ZapWeb.Models
         {
             var adminRepositorio = new AdministradoraRepositorio();
 
-            return adminRepositorio.Search(nome);
+            return adminRepositorio.Search(nome).GetList();
         }
 
         public Administradora Get(int Id)
         {
             var adminRepositorio = new AdministradoraRepositorio();
-            var enderecoRepositorio = new EnderecoRepositorio();
-            var administradora = adminRepositorio.Fetch(Id);
-
-            administradora.Endereco = enderecoRepositorio.Fetch(administradora.EnderecoId);
-
+            var administradora = adminRepositorio.Simple(Id)
+                                                 .IncludeTelefones()
+                                                 .IncludeEndereco()
+                                                 .Get();
+            
             return administradora;
         }
 

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ZapWeb.Models
 {
-    public class AdministradoraRepositorio : ZapWeb.Lib.Mvc.Repositorio
+    public class AdministradoraRepositorio : ZapWeb.Lib.Mvc.Repositorio<Administradora>
     {
 
         public Administradora Insert(Administradora administradora)
@@ -24,12 +24,21 @@ namespace ZapWeb.Models
 
         public void Update(Administradora administradora)
         {
+            if (administradora.Endereco != null)
+            {
+                administradora.EnderecoId = administradora.Endereco.Id;
+            }
+
+            this.InsertTelefones(administradora);
+
             this.Db.Update(administradora);
         }
 
         public void InsertTelefones(Administradora administradora)
         {
             if (administradora.Telefones == null) return;
+
+            this.Db.Execute("DELETE FROM AdministradoraTelefone WHERE AdministradoraId = @0", administradora.Id);
 
             foreach (var telefone in administradora.Telefones)
             {
@@ -40,22 +49,54 @@ namespace ZapWeb.Models
             }
         }
 
-        public List<Administradora> Search(string nome)
+        public AdministradoraRepositorio Search(string nome)
         {
             var sql = PetaPoco.Sql.Builder.Append("SELECT *")
                                           .Append("FROM Administradora")
                                           .Append("WHERE Nome LIKE @0", "%" + nome + "%");
 
-            return this.Db.Fetch<Administradora>(sql);
+            ResultSet = this.Db.Fetch<Administradora>(sql);
+
+            return this;
         }
 
-        public Administradora Fetch(int Id)
+        public AdministradoraRepositorio Simple(int Id)
         {
             var sql = PetaPoco.Sql.Builder.Append("SELECT *")
                                           .Append("FROM Administradora")
                                           .Append("WHERE Id = @0", Id);
 
-            return this.Db.SingleOrDefault<Administradora>(sql);
+            ResultSet = this.Db.Fetch<Administradora>(sql);
+
+            return this;
+        }
+
+        public AdministradoraRepositorio IncludeTelefones()
+        {            
+
+            foreach (var administradora in ResultSet)
+            {
+                var sql = PetaPoco.Sql.Builder.Append("SELECT Telefone.*")
+                                              .Append("FROM Administradora")
+                                              .Append("INNER JOIN AdministradoraTelefone ON AdministradoraTelefone.AdministradoraId = AdministradoraId")
+                                              .Append("INNER JOIN Telefone ON Telefone.Id = AdministradoraTelefone.TelefoneId")
+                                              .Append("WHERE Administradora.Id = @0", administradora.Id);
+
+                administradora.Telefones = this.Db.Fetch<Telefone>(sql);
+            }
+
+            return this;
+        }
+
+        public AdministradoraRepositorio IncludeEndereco()
+        {
+            var enderecoRepositorio = new EnderecoRepositorio();
+            foreach (var administradora in ResultSet)
+            {
+                administradora.Endereco = enderecoRepositorio.Fetch(administradora.EnderecoId);
+            }
+
+            return this;
         }
 
     }
