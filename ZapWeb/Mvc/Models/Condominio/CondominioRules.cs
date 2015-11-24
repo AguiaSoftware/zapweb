@@ -101,5 +101,34 @@ namespace ZapWeb.Models
             return condominioRepositorio.Search(param, unidade);
         }
 
+        public List<Condominio> Imprimir(string ids)
+        {
+            var condominioRepositorio = new CondominioRepositorio();
+            var unidadeRepositorio = new UnidadeRepositorio();
+            var enderecoRepositorio = new EnderecoRepositorio();
+            var contatoRepositorio = new ContatoRepositorio();
+            var administradoraRepositorio = new AdministradoraRepositorio();
+
+            var list = ids.Split(',');
+            var intList = new List<int>();
+
+            foreach (var item in list)
+            {
+                intList.Add(int.Parse(item));
+            }
+
+            var condominios = condominioRepositorio.Simple(intList);
+            foreach (var condominio in condominios)
+            {
+                condominio.Unidade = unidadeRepositorio.Fetch(condominio.UnidadeId);
+                condominio.Endereco = enderecoRepositorio.Fetch(condominio.EnderecoId);
+                condominio.Sindico = contatoRepositorio.Fetch(condominio.SindicoId);
+                condominio.Zelador = contatoRepositorio.Fetch(condominio.ZeladorId);
+                condominio.Administradora = administradoraRepositorio.Simple(condominio.AdministradoraId).Get();
+            }
+
+            return condominios;
+        }
+
     }
 }

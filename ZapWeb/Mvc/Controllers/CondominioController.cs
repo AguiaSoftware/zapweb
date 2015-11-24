@@ -54,5 +54,12 @@ namespace ZapWeb.Mvc.Controllers
             return this.Success(rules.Search(param));
         }
 
+        public string Imprimir(string ids)
+        {
+            var rules = new CondominioRules();
+
+            return this.Success(rules.Imprimir(ids));
+        }
+
     }
 }

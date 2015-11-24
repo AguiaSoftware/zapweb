@@ -111,7 +111,7 @@ body {
 
 .app-page {
     padding-top: 9px;
-    height: 1000px;
+    min-height: 1000px;
 }
 
 .app-page-title {
@@ -310,9 +310,21 @@ body {
     padding-top: 10px;
 }
 
+.app-print-only{
+    display: none
+}
+
 @media print {
     
     .not-print {
+        display: none !important;
+    }
+
+    .app-print-only{
+        display: block !important;
+    }
+
+    .app-print-hidden {
         display: none !important;
     }
 

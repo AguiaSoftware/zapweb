@@ -90,6 +90,20 @@ namespace ZapWeb.Models
             return this.Db.SingleOrDefault<Condominio>(sql);
         }
 
+        public List<Condominio> Simple(List<int> ids)
+        {
+            var sql = PetaPoco.Sql.Builder.Append("SELECT *")
+                                          .Append("FROM Condominio");
+
+            sql.Where("Condominio.Id = @0", ids[0]);
+
+            for (int i = 1; i < ids.Count; i++){
+                sql.Append("OR Condominio.Id = @0", ids[i]);
+            }
+
+            return this.Db.Fetch<Condominio>(sql);
+        }
+
         public List<Condominio> Search(CondominioSearch param, Unidade unidade)
         {
             var sql = PetaPoco.Sql.Builder.Append("SELECT Condominio.*, Endereco.*, Cidade.*, Unidade.*")

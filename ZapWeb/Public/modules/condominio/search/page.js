@@ -1,9 +1,11 @@
 ﻿yum.define([
 	PI.Url.create('Condominio', '/search/page.html'),
+    PI.Url.create('Condominio', '/search/impressao.html'),
 	PI.Url.create('Condominio', '/search/page.css'),
+	PI.Url.create('Condominio', '/search/impressao.css'),
 	PI.Url.create('Condominio', '/search/result.js'),
     PI.Url.create('Util', '/lineselect/lineselect.js')
-], function (html) {
+], function (html, printHtml) {
 
     Class('Condominio.Search.Page').Extend(PI.Page).Body({
 
@@ -50,6 +52,15 @@
 
             this.lineselect = new Util.LineSelect();
 
+            this.imprimir = new UI.Button({
+                label: 'Imprimir',
+                iconLeft: 'fa fa-print',
+                classes: 'cinza',
+                style: {
+                    'min-width': '120px'
+                }
+            });
+
             this.addNew = new UI.Button({
                 label: 'Adicionar Filtro',
                 iconLeft: 'fa fa-plus',
@@ -68,10 +79,14 @@
             this.model = new Condominio.Model();
             
             this.title = 'Pesquisar Condomínio';
+            
+            this.condominios = [];
         },
 
         viewDidLoad: function () {
             app.home.setTitle('Pesquisar Condomínio');
+
+            this.imprimir.hide();
 
             this.lineselect.showOnClick(this.addNew);
 
@@ -84,7 +99,8 @@
             this.base.viewDidLoad();
         },
         
-        popule: function(condominios){
+        popule: function(condominios){            
+            this.condominios = condominios;
             
             this.view.results.html('');
                         
@@ -98,19 +114,31 @@
             
             if(condominios.length == 0){
                 this.view.results.html('<div class="condominio-search-empty">Nenhum resultado encontrado</div>');
+            }else{                
+                this.imprimir.show();            
             }
         },
 
         search: function () {
             var self = this;
 
+            this.imprimir.hide();
+
             this.pesquisar.setLabel('Pesquisando ...').lock().anime(true);
 
             this.model.all().ok(function (condominios, paging) {
-                self.popule(condominios);
+                self.popule(condominios);                
             }).done(function(){
                 self.pesquisar.setLabel('Pesquisar').unlock().anime(false);
             });
+        },
+        
+        createContentPrint: function(condominios){
+            var view = Mvc.Helpers.prepare(condominios, printHtml).toView();
+            console.log(condominios);
+            this.view.printContent.html( view );
+            
+            window.print();
         },
 
         events: {
@@ -122,6 +150,24 @@
                 });
 
                 this.search();
+            },
+            
+            '{imprimir} click': function(){
+                var self = this;
+                var arr = [];
+                
+                for(var i in this.condominios){
+                    arr.push(this.condominios[i].Id);
+                }                
+                
+                this.imprimir.setLabel('Gerando ...').lock().anime(true);
+                
+                this.model.imprimir( arr.join(',') ).ok(function(condominios){
+                    self.createContentPrint( condominios );
+                }).done(function(){
+                    self.imprimir.setLabel('Imprimir').unlock().anime(false);
+                });
+                
             }
 
         }

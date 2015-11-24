@@ -22,7 +22,7 @@
         },
 
         viewDidLoad: function () {
-            this.tipo.add(new UI.Selection.Item({ id: 1, label: 'Fixo', showMenu: false }))
+            this.tipo.add(new UI.Selection.Item({ id: 1, label: 'Residencial', showMenu: false }))
             this.tipo.add(new UI.Selection.Item({ id: 2, label: 'Comercial', showMenu: false }))
             this.tipo.add(new UI.Selection.Item({ id: 3, label: 'Celular', showMenu: false }))
             this.tipo.add(new UI.Selection.Item({ id: 4, label: 'Fax', showMenu: false }))

@@ -23,6 +23,54 @@ yum.define([
 
 			return model;
 		},
+		
+		getTelefonesResidenciais: function(){
+			var telefones = this.Telefones || [];
+			var arr = [];
+			
+			for (var i = 0; i < telefones.length; i++) {
+				var t = telefones[i];				
+				if(t.Tipo == 1) arr.push(t.Numero);				
+			}
+			
+			return arr.join('/');
+		},
+		
+		getNumerosWhatsapp: function(){
+			var telefones = this.Telefones || [];
+			var arr = [];
+			
+			for (var i = 0; i < telefones.length; i++) {
+				var t = telefones[i];				
+				if(t.Tipo == 5) arr.push(t.Numero);				
+			}
+			
+			return arr.join('/');
+		},
+		
+		getTelefonesComerciais: function(){
+			var telefones = this.Telefones || [];
+			var arr = [];
+			
+			for (var i = 0; i < telefones.length; i++) {
+				var t = telefones[i];				
+				if(t.Tipo == 2) arr.push(t.Numero);				
+			}
+			
+			return arr.join('/');
+		},		
+		
+		getTelefonesCelular: function(){
+			var telefones = this.Telefones || [];
+			var arr = [];
+			
+			for (var i = 0; i < telefones.length; i++) {
+				var t = telefones[i];				
+				if(t.Tipo == 3) arr.push(t.Numero);				
+			}
+			
+			return arr.join('/');
+		},		
 
 		actions: {
 			

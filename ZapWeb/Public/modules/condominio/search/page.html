@@ -1,8 +1,8 @@
 ﻿<div class="app-page row">
 
-    <div class="col-sm-1 col-sm-offset-1"></div>
+    <div class="app-print-hidden col-sm-1 col-sm-offset-1"></div>
 
-    <div class="col-sm-7">
+    <div class="app-print-hidden col-sm-7">
         
         <div class="app-page-body">
             
@@ -49,9 +49,15 @@
 
     </div>
 
-    <div class="app-page-opcoes">
+    <div class="app-print-hidden app-page-opcoes">
         <div class="app-opcoes-button" at="pesquisar"></div>
         <div class="app-opcoes-button" at="voltar"></div>
+        <div class="app-opcoes-button" at="imprimir"></div>
     </div>
+
+    <div class="app-print-only" at="printContent" style="margin-top: -80px"></div>
+
+    <!--image baixa para fins de cache-->
+    <img style="position: fixed; top: -10000px" src="@{PI.Url.create('Condominio', '/search/img/zapPragas512.png')}" width="150" height="150">
 
 </div>
